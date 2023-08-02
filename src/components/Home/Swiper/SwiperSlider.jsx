@@ -41,7 +41,7 @@ const SwiperSlider = () => {
         modules={[Keyboard, Scrollbar, Navigation, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="relative w-full pt-20 bg-[#F4F4F4] hidden lg:hidden">
             <img src={imageUrl1} alt="Your Image" className="w-full h-auto" />
             <div className="absolute left-0 w-full h-full flex flex-col justify-center items-center -top-[110px] md:-top-52  lg:-top-[170px] xl:-top-[230px]">
@@ -51,7 +51,7 @@ const SwiperSlider = () => {
               <p className="text-xs underline">Explore Details</p>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
         <SwiperSlide>
           <div className="relative w-full pt-20 bg-[#F4F4F4]">
