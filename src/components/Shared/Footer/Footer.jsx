@@ -11,54 +11,72 @@ import pinterest from "../../../assets/Group 128.svg";
 const Footer = () => {
   return (
     <div className="bg-[#F8F7F7]">
-      <footer className="footer flex items-center justify-evenly p-10  text-base-content">
-        <div>
-          <span className="text-[15px] font-semibold text-black">Services</span>
-          <a className="link link-hover">Contact us</a>
-          <a className="link link-hover">FAQ</a>
-          <a className="link link-hover">Gifting</a>
+
+      <footer className="footer  items-center align-text-top justify-center p-10  text-base-content">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="flex flex-row items-center justify-between gap-8">
+         
+         <div className="font-Montserrat flex flex-col items-start justify-between ">
+           <span className="text-[15px] font-semibold text-black">
+             Services
+           </span>
+           <a className="link link-hover">Contact us</a>
+           <a className="link link-hover">FAQ</a>
+           <a className="link link-hover">Gifting</a>
+         </div>
+
+         <p class="w-[2px] h-32 bg-black md:block hidden"></p>
+
+         <div className="font-Montserrat flex flex-col items-start justify-between">
+           <span className="text-[15px] font-semibold text-black">Order</span>
+           <a className="link link-hover">Shipping</a>
+           <a className="link link-hover">Returns & Exchange</a>
+           <a className="link link-hover">Offer</a>
+         </div>
+         <p class="w-[2px] h-32 bg-black md:block hidden"></p>
+       
+       </div>
+
+       <div className="font-Montserrat">
+         <span className="text-[15px] font-semibold text-black ">
+           SUBSCRIBE TO OUR NEWSLETTER
+         </span>
+         <div className="form-control w-80 lg:w-full font-Montserrat">
+           <label className="label">
+             <span className="label-text text-sm font-Montserrat">
+               Want exclusive offers and first access to products? Sign up for
+               email alerts
+             </span>
+           </label>
+           <div className="relative">
+             <input
+               type="text"
+               placeholder="Enter the Email"
+               className="input input-bordered w-full pr-16 rounded-none"
+             />
+             <button className="btn bg-[#313132] text-white absolute top-0 right-0  rounded-l-none rounded-none font-Montserrat">
+               Subscribe
+             </button>
+           </div>
+           <p className="font-Montserrat">
+             Click Here to read New Look{" "}
+             <span>
+               <Link to="/" className="font-Montserrat">
+                 privacy notice
+               </Link>
+             </span>{" "}
+             or{" "}
+             <span>
+               <Link to="/" className="font-Montserrat">
+                 contact us
+               </Link>
+             </span>
+           </p>
+         </div>
+       </div>
         </div>
-        <p class="w-[2px] h-32 bg-black"></p>
-        <div>
-          <span className="text-[15px] font-semibold text-black">Order</span>
-          <a className="link link-hover">Shipping</a>
-          <a className="link link-hover">Returns & Exchange</a>
-          <a className="link link-hover">Offer</a>
-        </div>
-        <p class="w-[2px] h-32 bg-black"></p>
-        <div>
-          <span className="text-[15px] font-semibold text-black ">
-            SUBSCRIBE TO OUR NEWSLETTER
-          </span>
-          <div className="form-control w-80">
-            <label className="label">
-              <span className="label-text">
-                Want exclusive offers and first access to products? Sign up for
-                email alerts
-              </span>
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Enter the Email"
-                className="input input-bordered w-full pr-16 rounded-none"
-              />
-              <button className="btn bg-black text-white absolute top-0 right-0  rounded-l-none rounded-none">
-                Subscribe
-              </button>
-            </div>
-            <p>
-              Click Here to read New Look{" "}
-              <span>
-                <Link to="/">privacy notice</Link>
-              </span>{" "}
-              or{" "}
-              <span>
-                <Link to="/">contact us</Link>
-              </span>
-            </p>
-          </div>
-        </div>
+        
       </footer>
 
       <div>
@@ -125,7 +143,7 @@ const Footer = () => {
         <div className="divider"></div>
       </div>
       <div>
-        <div className="flex items-center justify-center gap-8 text-xs">
+        <div className="lg:flex items-center justify-center gap-8 text-xs text-center font-Montserrat">
           <p className="text-[#3D3D3D] font-Poopin">Privacy Policy</p>
           <span className="divider divider-horizontal"></span>
           <p className="font-Poopin">Terms of Use</p>
@@ -138,7 +156,7 @@ const Footer = () => {
         </div>
         <br />
         <div>
-          <p className="font-Poopin flex items-center justify-center">
+          <p className="font-Poopin flex items-center justify-center font-Montserrat text-sm md:text-md text-center">
             Copyright © 2023 New Look. ll All rights reserved. Bangladesh
           </p>
         </div>

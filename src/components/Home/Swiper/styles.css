@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  background: #ffff;
+  background: #F4F4F4;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -46,9 +46,9 @@ body {
     z-index: 2;
   }
 
-  .swiper-slide.swiper-slide-active:first-child img {
+  /* .swiper-slide.swiper-slide-active:first-child img {
     box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
-  }
+  } */
 
   .swiper-slide:nth-child(2) {
     transition: transform 100ms;
