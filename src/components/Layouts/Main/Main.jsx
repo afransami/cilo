@@ -12,8 +12,8 @@ const Main = () => {
         <div className="min-h-[calc(100vh-260px)]">
           <Outlet></Outlet>
         </div>
-        <div className="bg-[#F5F5F7] ">
-          <Footer></Footer>
+        <div className="bg-[#F8F7F7] ">
+          {/* <Footer></Footer> */}
         </div>
       </div>
     );
