@@ -13,7 +13,7 @@ const Main = () => {
           <Outlet></Outlet>
         </div>
         <div className="bg-[#F8F7F7] ">
-          {/* <Footer></Footer> */}
+          <Footer></Footer>
         </div>
       </div>
     );

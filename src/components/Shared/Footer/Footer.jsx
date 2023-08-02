@@ -13,7 +13,9 @@ const Footer = () => {
     <a className="link link-hover">Gifting</a>     
   </div> 
   {/* <div className="divider lg:divider-horizontal"></div>  */}
-  <div className="border-t border-gray-900 my-4"></div>
+  <div className="flex items-center">
+  <div className="border-l border-gray-900 h-full mx-4"></div>
+  </div>
   <div>
     <span className="footer-title">Company</span> 
     <a className="link link-hover">About us</a> 
@@ -23,14 +25,14 @@ const Footer = () => {
   </div> 
 
   <div>
-    <span className="footer-title">Newsletter</span> 
+    <span className="footer-title ">SUBSCRIBE TO OUR NEWSLETTER</span> 
     <div className="form-control w-80">
       <label className="label">
-        <span className="label-text">Enter your email address</span>
+        <span className="label-text">Want exclusive offers and first access to products? Sign up for email alerts</span>
       </label> 
       <div className="relative">
-        <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+        <input type="text" placeholder="Enter the Email" className="input input-bordered w-full pr-16 rounded-none" /> 
+        <button className="btn bg-black text-white absolute top-0 right-0  rounded-l-none rounded-none">Subscribe</button>
       </div>
     </div>
   </div>
