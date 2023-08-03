@@ -19,26 +19,20 @@ const Navbar = () => {
           <div className="">
             <div className="hidden md:block">
               <ul
-                className="font-Montserrat flex items-center justify-between gap-10 lg:gap-20 font-[13px] text-white">
-                {/* <li className=" hover:text-gray-900 cursor-pointer hidden md:block lg:hidden md:ml-10">
-                  <img
-                    className="w-10"                    
-                    src={Logoblk}
-                    alt=""
-                  />
-                </li> */}
-                <li className=" hover:text-gray-900 cursor-pointer hidden lg:block">
+                className="flex items-center justify-between gap-10 lg:gap-20 font-[13px] text-white" style={{ fontFamily: "Gotham, sans-serif" }}>
+              
+                <li className=" hover:text-gray-900 cursor-pointer hidden md:block">
                   <img
                     className="w-10"
                     src={Logo}
                     alt=""
                   />
                 </li>
-                <li className="font-Montserrat hover:text-gray-400 cursor-pointer text-[13px]">Company</li>
-                <li className="font-Montserrat hover:text-gray-400 cursor-pointer text-[13px]">Brand New</li>
-                <li className="font-Montserrat hover:text-gray-400 cursor-pointer text-[13px]">Recondition</li>
-                <li className="font-Montserrat hover:text-gray-400 cursor-pointer text-[13px]">e-Garage</li>
-                <li className="font-Montserrat hover:text-gray-400 cursor-pointer text-[13px]">
+                <li className=" hover:text-gray-400 cursor-pointer text-[15px]">Company</li>
+                <li className="hover:text-gray-400 cursor-pointer text-[15px]">Brand New</li>
+                <li className="hover:text-gray-400 cursor-pointer text-[15px]">Recondition</li>
+                <li className="hover:text-gray-400 cursor-pointer text-[15px]">e-Garage</li>
+                <li className="hover:text-gray-400 cursor-pointer text-[15px]">
                   Contact
                 </li>
                 <li className=" hover:text-gray-400 cursor-pointer">
@@ -84,20 +78,20 @@ const Navbar = () => {
         className={`${isOpen ? "block" : "hidden"} md:hidden`}
         id="mobile-menu"
       >
-        <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 flex flex-col font-Montserrat">
-          <Link className="font-Montserrat text-gray-300 hover:text-gray-500 cursor-pointer">
+        <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 flex flex-col" style={{ fontFamily: "Gotham, sans-serif" }}>
+          <Link className=" text-gray-300 hover:text-gray-500 cursor-pointer">
             Company
           </Link>
-          <Link className="font-Montserrat text-gray-300 hover:text-gray-500 cursor-pointer">
+          <Link className="text-gray-300 hover:text-gray-500 cursor-pointer">
             Brand New
           </Link>
-          <Link className="font-Montserrat text-gray-300 hover:text-gray-500 cursor-pointer">
+          <Link className="text-gray-300 hover:text-gray-500 cursor-pointer">
             Recondition
           </Link>
           <Link className="text-gray-300 hover:text-gray-500 cursor-pointer">
             e-Garage
           </Link>
-          <Link className="font-Montserrat text-gray-300 hover:text-gray-500 cursor-pointer">
+          <Link className="text-gray-300 hover:text-gray-500 cursor-pointer">
           Contact
           </Link>
         </div>

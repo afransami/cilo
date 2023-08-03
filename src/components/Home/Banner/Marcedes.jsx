@@ -5,11 +5,12 @@ const Marcedes = () => {
   return (
     <div className="relative w-full">
       <img src={imageUrl} alt="Your Image" className="w-full h-auto" />
-      <div className="absolute left-0 w-full h-full flex flex-col justify-center items-center   -top-[70px] md:-top-32  lg:-top-[170px] xl:-top-[280px]">
-        <p className="text-white text-sm sm:text-lg md:text-2xl lg:text-4xl font-Montserrat">
+      <div className="absolute left-0 w-full h-full  text-white" style={{ fontFamily: 'Gotham, sans-serif' }}>
+      {/* <div className="absolute left-0 w-full h-full flex flex-col justify-center items-center   -top-[75px]  md:-top-32  lg:-top-[170px] xl:-top-[290px] text-white" style={{ fontFamily: 'Gotham, sans-serif' }}> */}
+      <p className=" text-[15px] sm:text-base md:text-xl lg:text-4xl font-bold">
           Marcedese Benz
         </p>
-        <p className="text-white text-lg underline font-Montserrat">Explore Details</p>
+        <p className=" text-[13px] underline mt-1 sm:mt-2 md:mt-6 lg:mt-8">Explore Details</p>
       </div>
     </div>
 

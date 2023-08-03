@@ -13,6 +13,8 @@ const Home = () => {
             <Banner></Banner>
             <div className='mt-10'>
             <SwiperSlider></SwiperSlider>            
+            
+            <div className=" mt-8 " style={{ borderBottom: '1px solid slategrey' }}></div>
             </div>
             <div className='mt-10'>
             <Card></Card>

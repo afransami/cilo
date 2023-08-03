@@ -8,3 +8,150 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Customize the appearance of the navigation arrows */
+/* Customize the appearance of the navigation arrows */
+.swiper-button-prev,
+.swiper-button-next  {
+  background-color: rgb(14, 1, 1); /* Add your desired background color */
+  color: #fff !important; /* Add your desired text color */
+  padding: 8px; /* Add padding to create a larger clickable area */
+  cursor: pointer;
+  transition: transform 0.2s; /* Add a transition for smooth scaling */ 
+  width: 12px !important;
+  
+  
+}
+
+/* Style the right arrow (next button) */
+.swiper-button-next {  
+  margin-left: 10px; /* Adjust the spacing between the arrows */
+}
+
+/* Scale down the arrow icons on normal state */
+.swiper-button-prev::before,
+.swiper-button-next::before { 
+  transform: scale(0.8); /* Adjust the scale value to make it smaller */
+  
+}
+
+/* Scale down the arrow icons on hover */
+.swiper-button-prev:hover::before,
+.swiper-button-next:hover::before {
+  transform: scale(0.7); /* Adjust the scale value for smaller size on hover */
+}
+
+/* Optionally, you can adjust the position of the arrows using top and bottom properties */
+.swiper-button-prev {
+  top: 50%;
+}
+
+.swiper-button-next {
+  top: 50%;
+}
+
+
+
+/* CSS for showing text container in landscape mode for mobile devices with width 896px and height 414px */
+/* @media (min-width: 896px) and (max-height: 414px) and (orientation: landscape) {
+    .swiper-slide .absolute {
+      top: 20%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  } */
+  /* @media (min-width: 667px) and (max-height: 414px) and (orientation: landscape) { */
+  @media (min-width: 320px) and (max-height: 1440px) and (orientation:landscape) {
+    .swiper-slide .absolute {
+      top: 28%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;      
+    }
+  }
+  
+
+  @font-face {
+    font-family: 'Gotham';
+    src: url('./fonts/Gotham-Medium.woff2') format('woff2'),
+         url('./fonts/Gotham-Medium.woff') format('woff');
+    /* Add more font formats if available (e.g., .ttf) */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+
+
+
+
+
+  /* Default styles for all screen sizes */
+
+
+/* Styles for mobile devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  .swiper-slide .absolute {
+    top: 28%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+  }
+  .absolute {
+    top: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Styles for tablets with a minimum width of 769px and a maximum width of 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .swiper-slide .absolute {
+    top: 28%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+  }
+  .absolute {
+    top: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Styles for desktop view with a minimum width of 1025px */
+@media (min-width: 1025px) {
+  .swiper-slide .absolute {
+    top: 28%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+  }
+  .absolute {
+    top: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
