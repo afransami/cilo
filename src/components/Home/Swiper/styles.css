@@ -39,6 +39,8 @@ body {
   object-fit: cover;
 }
 
+
+
 /* Custom Swiper styles */
 .swiper-pagination-bullet-active {
   background-color: black; /* Active dot color */

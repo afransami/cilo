@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto:wght@100;400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto:wght@100;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-align: center; */
+  }
 
 
 /* Customize the appearance of the navigation arrows */
@@ -174,7 +179,20 @@
     font-size: 16px;
   }
   .vtitle {
-    font-size: 24px;
+    font-size: 30px;
   }
   
+}
+
+
+/* styles.css */
+.bg-large-device {
+  background-image: url('https://i.ibb.co/BzsGGLM/Rectangle-4.png');
+}
+
+/* Apply the custom background image only for mobile devices */
+@media (max-width: 768px) {
+  .bg-mobile-device {
+    background-image: url('https://i.ibb.co/bH7LxWB/Rectangle-1448.png');
+  }
 }

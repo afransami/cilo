@@ -5,7 +5,7 @@ const Card = () => {
   const imageUrl2 = "https://i.ibb.co/c1f2Zmm/Rectangle-1366-1.png";
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mx-auto container">
+    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 px-3 lg:px-8 ">
       <div className="relative w-full h-auto overflow-hidden">
         <img
           src={imageUrl}

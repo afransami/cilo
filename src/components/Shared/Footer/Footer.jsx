@@ -92,7 +92,10 @@ const Footer = () => {
       </footer>
 
       <div>
-        <div className="divider"></div>
+        <div
+          className="mb-4"
+          style={{ borderBottom: "1px solid lightgray" }}
+        ></div>
         <ul className="flex justify-center items-center gap-6 mt-0 ">
           <li>
             <a
@@ -127,7 +130,7 @@ const Footer = () => {
               <span className="sr-only">Instagram</span>
               <FaInstagramSquare className="text-4xl hover:rotate-45 hover:scale-110 transition-all hover:bg-pink-600"></FaInstagramSquare>
             </a>
-          </li>        
+          </li>
           <li>
             <a
               href="/"
@@ -141,33 +144,37 @@ const Footer = () => {
           </li>
         </ul>
 
-        <div className="divider"></div>
+        <div
+          className="my-4"
+          style={{ borderBottom: "1px solid lightgray" }}
+        ></div>
       </div>
       <div>
         <div
           className="flex items-start justify-center gap-8 text-[14px] text-center"
           style={{ fontFamily: "Gotham, sans-serif" }}
         >
-          
           <div className="lg:flex items-start justify-center gap-8">
-          <p className="">Privacy Policy</p>
-          <span className="divider divider-horizontal"></span>
-          <p className="">Terms of Use</p>
-          <span className="divider divider-horizontal"></span>
-          <p className="">Sales and Refunds</p>
+            <p className="">Privacy Policy</p>
+            <span className="divider divider-horizontal"></span>
+            <p className="">Terms of Use</p>
+            <span className="divider divider-horizontal"></span>
+            <p className="">Sales and Refunds</p>
           </div>
 
           <div className="lg:flex items-start justify-center gap-8">
-          <span className="divider divider-horizontal"></span>
-          <p className="">Legal</p>
-          <span className="divider divider-horizontal"></span>
-          <p className="">Site Map</p>
+            <span className="divider divider-horizontal"></span>
+            <p className="">Legal</p>
+            <span className="divider divider-horizontal"></span>
+            <p className="">Site Map</p>
           </div>
-          
         </div>
         <br />
         <div>
-          <p className="flex items-center justify-center text-sm md:text-md text-center" style={{ fontFamily: "Gotham, sans-serif" }}>
+          <p
+            className="flex items-center justify-center text-sm md:text-md text-center"
+            style={{ fontFamily: "Gotham, sans-serif" }}
+          >
             Copyright © 2023 CILO. ll All rights reserved. Bangladesh
           </p>
         </div>

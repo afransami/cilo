@@ -5,15 +5,37 @@ import { RiEqualLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/ciloLogo.png"
+import Logo from "../../../assets/ciloLogo.png";
+import SearchBar from "../../Utils/SearchBar/SearchBar";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState("#313132");
 
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearchIconClick = () => {
+    setShowSearch(!showSearch);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    // Implement your search logic here using the `searchValue` state
+    console.log("Search submitted:", searchValue);
+  };
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setNavColor("#2727277F") : setNavColor("#313132");
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 768) {
+      // Change 768 to the breakpoint where you want to apply the color change
+      window.scrollY > 10 ? setNavColor("#2727277F") : setNavColor("#313132");
+    }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
@@ -29,32 +51,52 @@ const Navbar = () => {
 
   return (
     // <nav className="bg-[#313132] z-3 fixed top-0 left-0 right-0 z-10">
-      <nav className=" bg-[#313132] fixed top-0 left-0 right-0 z-10">
-      <div className="" style={{
+    <nav className="fixed top-0 left-0 right-0 z-10">
+      <div
+        className=""
+        style={{
           backgroundColor: navColor,
-          transition: "all 1s",          
-        }}>
-        <div className="md:flex items-center justify-center h-14">
+          transition: "all 1s",
+        }}
+      >
+        <div className="md:flex items-center justify-center lg:h-14 h-12">
           <div className="">
             <div className="hidden md:block">
               <ul
-                className="flex items-center justify-center gap-10 px-8 lg:gap-20 text-white " style={{ fontFamily: "Gotham, sans-serif" }}>
-              
+                className="flex items-center justify-center gap-10 px-8 lg:gap-20 text-white "
+                style={{ fontFamily: "Gotham, sans-serif" }}
+              >
                 <li className=" hover:text-gray-900 cursor-pointer hidden md:block">
-                  <img
-                    className="w-10"
-                    src={Logo}
-                    alt=""
-                  />
+                  <img className="w-10" src={Logo} alt="" />
                 </li>
-                <li className=" hover:text-gray-400 cursor-pointer text-[16px]">Company</li>
-                <li className="hover:text-gray-400 cursor-pointer text-[16px]">Brand New</li>
-                <li className="hover:text-gray-400 cursor-pointer text-[16px]">Recondition</li>
-                <li className="hover:text-gray-400 cursor-pointer text-[16px]">e-Garage</li>
-                <li className="hover:text-gray-400 cursor-pointer text-[16px]">
-                  Contact
-                </li>
+                <Link to="company">
+                  <li className=" hover:text-gray-400 cursor-pointer text-[16px]">
+                    Company
+                  </li>
+                </Link>
+                <Link to="brand-new">
+                  <li className="hover:text-gray-400 cursor-pointer text-[16px]">
+                    Brand New
+                  </li>
+                </Link>
+                <Link to="recondintion">
+                  <li className="hover:text-gray-400 cursor-pointer text-[16px]">
+                    Recondition
+                  </li>
+                </Link>
+                <Link to="e-garage">
+                  <li className="hover:text-gray-400 cursor-pointer text-[16px]">
+                    e-Garage
+                  </li>
+                </Link>
+                <Link to="contact">
+                  <li className="hover:text-gray-400 cursor-pointer text-[16px]">
+                    Contact
+                  </li>
+                </Link>
                 <li className=" hover:text-gray-400 cursor-pointer">
+                <li><SearchBar/>
+              </li>
                   <FiSearch className="text-xl text-white"></FiSearch>
                 </li>
               </ul>
@@ -67,7 +109,7 @@ const Navbar = () => {
               type="button"
               className="inline-flex items-center justify-center rounded-md text-gray-300 hover:text-white "
               aria-controls="mobile-menu"
-              aria-expanded="false"             
+              aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
               <RiEqualLine
@@ -79,25 +121,28 @@ const Navbar = () => {
               ></MdClose>
             </button>
 
-            <Link to="/"><img
-              className="w-12 cursor-pointer"
-              src={Logo}              
-              alt=""
-            /></Link>
+            <Link to="/">
+              <img className="w-12 cursor-pointer" src={Logo} alt="" />
+            </Link>
 
             <ul>
-              <li className="text-white cursor-pointer">
+              <SearchBar/>
+              
+              {/* <li className="text-white cursor-pointer">
                 <FiSearch className="text-lg text-white"></FiSearch>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
       </div>
       <div
         className={`${isOpen ? "block" : "hidden"} md:hidden`}
-        id="mobile-menu"       
+        id="mobile-menu"
       >
-        <div className="px-4 pt-6 pb-8 space-y-8 flex flex-col" style={{ fontFamily: "Gotham, sans-serif" }}>
+        <div
+          className="bg-[#313132] px-4 pt-6 pb-8 space-y-8 flex flex-col"
+          style={{ fontFamily: "Gotham, sans-serif" }}
+        >
           <Link className=" text-gray-100 hover:text-gray-500 cursor-pointer">
             Company
           </Link>
@@ -111,7 +156,7 @@ const Navbar = () => {
             e-Garage
           </Link>
           <Link className="text-gray-100 hover:text-gray-500 cursor-pointer">
-          Contact
+            Contact
           </Link>
         </div>
       </div>

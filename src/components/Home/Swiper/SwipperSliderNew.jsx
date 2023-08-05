@@ -12,6 +12,7 @@ import "./styles.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
+
 const SwipperSliderNew = () => {
   const swiperRef = useRef(null);
 
@@ -26,22 +27,23 @@ const SwipperSliderNew = () => {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
   const imageUrl1 = "https://i.ibb.co/NsptGDG/Rectangle-6-2.png";
   const imageUrl2 = "https://i.ibb.co/MnVJYzR/Rectangle-6-2.png";
   const imageUrl3 = "https://i.ibb.co/my74Q22/Rectangle-6-2.png";
 
   return (
-    <div className="mx-auto container" style={{ position: "relative" }}>
+    <div className="" style={{ position: "relative" }}>
       <Swiper
         ref={swiperRef}
         slidesPerView={2.2}
-        spaceBetween={20}
+        spaceBetween={20}        
         grabCursor={true}
         pagination={{
           clickable: true,
         }}
-        navigation={false} // Disable default navigation
-        modules={[Pagination, Navigation]} // Add both Pagination and Navigation modules
+        navigation={false} // Disable default navigation 
+        modules={[Pagination, Navigation]} // Add both Pagination and Navigation modules       
         className="mySwiper"
         breakpoints={{          
           320: {
@@ -153,7 +155,7 @@ const SwipperSliderNew = () => {
         }}
       >
         <button
-          className="btn bg-black text-white btn-square rounded-none btn-sm mr-2"
+          className="lg:hidden text-black/50 rounded-none text-[20px] ml-3"
           onClick={goPrev}
         >
           ❮
@@ -169,7 +171,7 @@ const SwipperSliderNew = () => {
         }}
       >
         <button
-          className="btn bg-black text-white btn-square rounded-none btn-sm mr-2"
+          className="lg:hidden text-black/50 rounded-none text-[20px] mr-3"
           onClick={goNext}
         >
           ❯
