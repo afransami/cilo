@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     // <nav className="bg-[#313132] z-3 fixed top-0 left-0 right-0 z-10">
-      <nav className=" bg-[#2727277F] fixed top-0 left-0 right-0 z-10">
+      <nav className=" bg-[#313132] fixed top-0 left-0 right-0 z-10">
       <div className="" style={{
           backgroundColor: navColor,
           transition: "all 1s",          
