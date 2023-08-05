@@ -11,10 +11,10 @@ import pinterest from "../../../assets/Group 128.svg";
 const Footer = () => {
   return (
     <div className="bg-[#F8F7F7]">
-      <footer className="footer  items-center align-text-top justify-center p-5  text-base-content">
+      <footer className="footer items-center align-text-top justify-center p-5  text-base-content">
         <div className="grid grid-cols-2 md:grid-cols-1 gap-24 justify-between items-center mt-5">
           <div className="grid lg:grid-cols-1 gap-8">
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-20">
+            <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-20 gap-8">
               <div className="flex flex-row items-center justify-between gap-14">
                 <div
                   className="flex flex-row items-start justify-between gap-14 text-[16px]"
@@ -29,7 +29,7 @@ const Footer = () => {
                     <a className="link link-hover">Gifting</a>
                   </div>
 
-                  <p class="w-[1px] h-32 bg-gray-400 md:block hidden"></p>
+                  <p className="w-[1px] h-32 bg-gray-400 md:block hidden"></p>
                 </div>
 
                 <div
@@ -45,7 +45,7 @@ const Footer = () => {
                     <a className="link link-hover">Offer</a>
                   </div>
 
-                  <p class="w-[1px] h-32 bg-gray-400 md:block hidden"></p>
+                  <p className="w-[1px] h-32 bg-gray-400 md:block hidden"></p>
                 </div>
               </div>
 
@@ -63,25 +63,19 @@ const Footer = () => {
 
                   <div className="join">
                     <input
-                      className="input input-bordered join-item"
+                      className="input input-bordered join-item w-full"
                       placeholder="Enter the Email"
                     />
-                    <button className="btn join-item bg-[#313132] text-white" style={{ fontFamily: "Gotham, sans-serif" }}>
+                    <button
+                      className="btn join-item hover:bg-gray-700 bg-black text-white"
+                      style={{ fontFamily: "Gotham, sans-serif" }}
+                    >
                       Subscribe
                     </button>
                   </div>
-                  {/* <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Enter the Email"
-                    className="input input-bordered w-full pr-16 rounded-none"
-                  />
-                  <button className="btn bg-[#313132] text-white absolute top-0 right-0  rounded-l-none rounded-none">
-                    Subscribe
-                  </button>
-                </div> */}
-                  <p>
-                    Click Here to read New Look{" "}
+
+                  <small>
+                    Click Here to read <a href="#">CILO</a>{" "}
                     <span>
                       <Link to="/">privacy notice</Link>
                     </span>{" "}
@@ -89,7 +83,7 @@ const Footer = () => {
                     <span>
                       <Link to="/">contact us</Link>
                     </span>
-                  </p>
+                  </small>
                 </div>
               </div>
             </div>
@@ -108,7 +102,7 @@ const Footer = () => {
               className="transition hover:text-indigo-600"
             >
               <span className="sr-only">Facebook</span>
-              <FaFacebookSquare className="text-4xl "></FaFacebookSquare>
+              <FaFacebookSquare className="text-4xl hover:rotate-45 hover:scale-110 transition-all"></FaFacebookSquare>
             </a>
           </li>
 
@@ -120,7 +114,7 @@ const Footer = () => {
               className="transition hover:text-info"
             >
               <span className="sr-only ">Twitter</span>
-              <FaTwitterSquare className="text-4xl"></FaTwitterSquare>
+              <FaTwitterSquare className="text-4xl hover:rotate-45 hover:scale-110 transition-all"></FaTwitterSquare>
             </a>
           </li>
           <li>
@@ -128,27 +122,21 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="transition hover:bg-pink-600"
+              className="transition "
             >
               <span className="sr-only">Instagram</span>
-              <FaInstagramSquare className="text-4xl hover:bg-pink-600"></FaInstagramSquare>
+              <FaInstagramSquare className="text-4xl hover:rotate-45 hover:scale-110 transition-all hover:bg-pink-600"></FaInstagramSquare>
             </a>
-          </li>
-          <li>
-            <a href="/" rel="noreferrer" target="_blank" className="transition">
-              <img className="w-22" src={pinterest} alt="" />
-            </a>
-          </li>
-
+          </li>        
           <li>
             <a
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="transition hover:bg-red-600"
+              className="transition "
             >
               <span className="sr-only">Youtube</span>
-              <FaYoutubeSquare className="text-4xl hover:bg-red-600"></FaYoutubeSquare>
+              <FaYoutubeSquare className="text-4xl hover:rotate-45 hover:scale-110 transition-all hover:bg-red-600"></FaYoutubeSquare>
             </a>
           </li>
         </ul>
@@ -157,23 +145,30 @@ const Footer = () => {
       </div>
       <div>
         <div
-          className="lg:flex items-center justify-center gap-8 text-xs text-center"
+          className="flex items-start justify-center gap-8 text-[14px] text-center"
           style={{ fontFamily: "Gotham, sans-serif" }}
         >
-          <p className="text-[#3D3D3D] font-Poopin">Privacy Policy</p>
+          
+          <div className="lg:flex items-start justify-center gap-8">
+          <p className="">Privacy Policy</p>
           <span className="divider divider-horizontal"></span>
-          <p className="font-Poopin">Terms of Use</p>
+          <p className="">Terms of Use</p>
           <span className="divider divider-horizontal"></span>
-          <p className="font-Poopin">Sales and Refunds</p>
+          <p className="">Sales and Refunds</p>
+          </div>
+
+          <div className="lg:flex items-start justify-center gap-8">
           <span className="divider divider-horizontal"></span>
-          <p className="font-Poopin">Legal</p>
+          <p className="">Legal</p>
           <span className="divider divider-horizontal"></span>
-          <p className="font-Poopin">Site Map</p>
+          <p className="">Site Map</p>
+          </div>
+          
         </div>
         <br />
         <div>
-          <p className="font-Poopin flex items-center justify-center text-sm md:text-md text-center">
-            Copyright © 2023 New Look. ll All rights reserved. Bangladesh
+          <p className="flex items-center justify-center text-sm md:text-md text-center" style={{ fontFamily: "Gotham, sans-serif" }}>
+            Copyright © 2023 CILO. ll All rights reserved. Bangladesh
           </p>
         </div>
       </div>

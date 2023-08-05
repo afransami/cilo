@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  background: #eee;
+  background: #ffff;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -37,4 +37,37 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Custom Swiper styles */
+.swiper-pagination-bullet-active {
+  background-color: black; /* Active dot color */
+}
+
+.swiper-pagination-bullet {
+  background-color: gray; /* Upcoming dot color */
+}
+
+
+@media (max-width: 768px) {
+  .underline {
+    font-size: 13px;
+    
+  }
+  
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+ .underline {
+    font-size: 15px;
+    
+  }
+  
+}
+
+@media (min-width: 1025px) {
+  .underline {
+    font-size: 20px;
+  }
 }

@@ -12,7 +12,7 @@ const Main = () => {
         <div className="min-h-[calc(100vh-380px)]">
           <Outlet></Outlet>
         </div>
-        <div className="bg-[#F8F7F7]">
+        <div className="bg-[#F8F7F7] mb-10 mt-8">
           <Footer></Footer>
         </div>
       </div>

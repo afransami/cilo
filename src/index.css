@@ -5,9 +5,7 @@
 @tailwind utilities;
 
 
-body {
-    font-family: 'Montserrat', sans-serif;
-}
+
 
 /* Customize the appearance of the navigation arrows */
 /* Customize the appearance of the navigation arrows */
@@ -63,15 +61,16 @@ body {
       align-items: center;
     }
   } */
-  /* @media (min-width: 667px) and (max-height: 414px) and (orientation: landscape) { */
-  @media (min-width: 320px) and (max-height: 1440px) and (orientation:landscape) {
+  @media (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
+  /* @media (min-width: 320px) and (max-height: 1440px) and (orientation:landscape) { */
     .swiper-slide .absolute {
-      top: 28%;
+      top:20%;
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;      
+      align-items: center;
+
     }
   }
   
@@ -98,13 +97,14 @@ body {
 
 /* Styles for mobile devices with a maximum width of 768px */
 @media (max-width: 768px) {
-  .swiper-slide .absolute {
-    top: 28%;
-    transform: translateY(-50%);
+  .swiper-slide .absolute .vtitle {
+    top: 15%;
+    transform: translateY(-15%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;      
+    align-items: center;    
+    font-size: 20px;  
   }
   .absolute {
     top: 15%;
@@ -114,17 +114,25 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .underline {
+    font-size: 15px;
+  }
+  .vtitle {
+    font-size: 20px;
+  }
+  
 }
 
 /* Styles for tablets with a minimum width of 769px and a maximum width of 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .swiper-slide .absolute {
-    top: 28%;
+  .swiper-slide .absolute .vtitle {
+    top: 20%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;      
+    align-items: center;    
+    font-size: 20px;      
   }
   .absolute {
     top: 15%;
@@ -134,17 +142,25 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .underline  {
+    font-size: 17px;
+  }
+  .vtitle {
+    font-size: 22px;
+  }
+  
 }
 
 /* Styles for desktop view with a minimum width of 1025px */
 @media (min-width: 1025px) {
-  .swiper-slide .absolute {
-    top: 28%;
+  .swiper-slide .absolute .vtitle {
+    top: 20%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;      
+    align-items: center;
+    font-size: 30px;
   }
   .absolute {
     top: 15%;
@@ -154,4 +170,11 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .underline {
+    font-size: 20px;
+  }
+  .vtitle {
+    font-size: 24px;
+  }
+  
 }
