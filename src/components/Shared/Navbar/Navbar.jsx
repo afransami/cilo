@@ -5,28 +5,12 @@ import { RiEqualLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/ciloLogo.png";
-import SearchBar from "../../Utils/SearchBar/SearchBar";
+import Logo from "../../../assets/cilologo.svg";
+
+
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState("#313132");
-
-  const [showSearch, setShowSearch] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
-
-  const handleSearchIconClick = () => {
-    setShowSearch(!showSearch);
-  };
-
-  const handleSearchChange = (e) => {
-    setSearchValue(e.target.value);
-  };
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    // Implement your search logic here using the `searchValue` state
-    console.log("Search submitted:", searchValue);
-  };
 
   const listenScrollEvent = () => {
     const screenWidth = window.innerWidth;
@@ -67,7 +51,7 @@ const Navbar = () => {
                 style={{ fontFamily: "Gotham, sans-serif" }}
               >
                 <li className=" hover:text-gray-900 cursor-pointer hidden md:block">
-                  <img className="w-10" src={Logo} alt="" />
+                  <a href="/"><img className="w-[70px]" src={Logo} alt="" /></a>
                 </li>
                 <Link to="company">
                   <li className=" hover:text-gray-400 cursor-pointer text-[16px]">
@@ -95,8 +79,6 @@ const Navbar = () => {
                   </li>
                 </Link>
                 <li className=" hover:text-gray-400 cursor-pointer">
-                <li><SearchBar/>
-              </li>
                   <FiSearch className="text-xl text-white"></FiSearch>
                 </li>
               </ul>
@@ -122,15 +104,13 @@ const Navbar = () => {
             </button>
 
             <Link to="/">
-              <img className="w-12 cursor-pointer" src={Logo} alt="" />
+              <img className="w-10 cursor-pointer" src={Logo} alt="" />
             </Link>
 
             <ul>
-              <SearchBar/>
-              
-              {/* <li className="text-white cursor-pointer">
+              <li className="text-white cursor-pointer">
                 <FiSearch className="text-lg text-white"></FiSearch>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>

@@ -2,15 +2,10 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import Card from "../Card/Card";
 import SwipperSliderNew from "../Swiper/swipperSliderNew";
-// import ParallaxBanner from "../Banner/ParallaxBanner";
-
-
 
 const Home = () => {
   return (
     <div className="lg:mt-12 mt-6">
-      {/* <ParallaxBanner></ParallaxBanner> */}
-      {/* <HomePage></HomePage>       */}
       <Banner></Banner>
       <div className="mt-10">
         <SwipperSliderNew></SwipperSliderNew>

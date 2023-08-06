@@ -1,19 +1,27 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation"; // Import navigation styles
-
 import "./styles.css";
-
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
 
 const SwipperSliderNew = () => {
+  const [Slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    // Fetch the JSON data
+    fetch("/src/assets/SliderData.json")
+      .then((response) => response.json())
+      .then((data) => setSlides(data))
+      .catch((error) => console.error("Error fetching data:", error));
+      console.log(Slides)
+  }, []);
+
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -28,12 +36,12 @@ const SwipperSliderNew = () => {
     }
   };
 
-  const imageUrl1 = "https://i.ibb.co/NsptGDG/Rectangle-6-2.png";
-  const imageUrl2 = "https://i.ibb.co/MnVJYzR/Rectangle-6-2.png";
-  const imageUrl3 = "https://i.ibb.co/my74Q22/Rectangle-6-2.png";
+  // const imageUrl1 = "https://i.ibb.co/NsptGDG/Rectangle-6-2.png";
+  // const imageUrl2 = "https://i.ibb.co/MnVJYzR/Rectangle-6-2.png";
+  // const imageUrl3 = "https://i.ibb.co/my74Q22/Rectangle-6-2.png";
 
   return (
-    <div className="" style={{ position: "relative" }}>
+    <div style={{ position: "relative" }}>
       <Swiper
         ref={swiperRef}
         slidesPerView={2.2}
@@ -55,15 +63,16 @@ const SwipperSliderNew = () => {
           },
         }}
       >
-        <SwiperSlide className="mb-8">
-          <div className="relative w-full">
-            <img src={imageUrl1} alt="Your Image" className="w-full h-auto"/>
+        {Slides.map((Slide)=>(
+          <SwiperSlide className="mb-8">
+          <div key={Slides.id} className="relative w-full">
+            <img src={Slide.imageLg} alt="Your Image" className="w-full h-auto"/>
             <div
               className="absolute left-0 w-full h-full flex flex-col justify-center items-center"
               style={{ fontFamily: "Gotham, sans-serif" }}
             >
               <p className="vtitle font-bold">
-                Toyota Fortuner
+                {Slide.title}
               </p>
               <p className="underline">
                 Explore Details
@@ -71,8 +80,10 @@ const SwipperSliderNew = () => {
             </div>
           </div>
         </SwiperSlide>
+        ))}
+        
 
-        <SwiperSlide className="">
+        {/* <SwiperSlide className="">
           <div className="relative w-full">
             <img src={imageUrl2} alt="Your Image" className="w-full h-auto" />
 
@@ -142,7 +153,7 @@ const SwipperSliderNew = () => {
               </p>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
 
       <div

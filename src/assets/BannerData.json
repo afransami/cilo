@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "Rolls-Royce Phantom",
+    "year": 2023,
+    "manufacturer": "Rolls-Royce Motor Cars",
+    "body_style": "Sedan",
+    "engine": {
+      "type": "V12",
+      "displacement": "6.75 L",
+      "horsepower": 563,
+      "torque": "663 lb-ft"
+    },
+    "transmission": {
+      "type": "8-Speed Automatic",
+      "drive_type": "Rear-Wheel Drive"
+    },
+    "interior": {
+      "seating_capacity": 5,
+      "materials": "Premium leather, wood veneers, and metal accents",
+      "infotainment": "12.3-inch touchscreen, navigation, premium audio system"
+    },
+    "exterior": {
+      "dimensions": {
+        "length": "227.2 inches",
+        "width": "79.4 inches",
+        "height": "64.6 inches",
+        "wheelbase": "139.8 inches"
+      },
+      "features": [
+        "Iconic Rolls-Royce Spirit of Ecstasy ornament",
+        "Signature large chrome grille",
+        "LED headlights and taillights",
+        "Electrically-retracting Spirit of Ecstasy emblem",
+        "Self-leveling air suspension"
+      ],
+      "colors": [
+        "Arctic White",
+        "Diamond Black",
+        "Anthracite",
+        "English White",
+        "Cherry Red"
+      ]
+    },
+    "performance": {
+      "0_to_60mph": "4.5 seconds",
+      "top_speed": "155 mph (electronically limited)",
+      "fuel_economy": {
+        "city": "12 mpg",
+        "highway": "20 mpg",
+        "combined": "15 mpg"
+      }
+    },
+    "price": {
+      "starting_price": "$450,000",
+      "max_price": "$500,000+ (depending on customization)"
+    },
+    "imageLg": "https://i.ibb.co/v1K4Mhr/Rectangle-2.png",
+    "imageM": "https://i.ibb.co/tcZqyBh/Rectangle-2-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Marcedese Benz",
+    "year": 2023,
+    "manufacturer": "BMW",
+    "body_style": "Electric Sedan",
+    "electric_range": "up to 300 miles",
+    "battery_capacity": "80 kWh",
+    "charging_time": {
+      "fast_charging_0_to_80_percent": "around 35 minutes",
+      "standard_charging_0_to_100_percent": "around 8 hours"
+    },
+    "engine": {
+      "type": "Electric Motor",
+      "power_output": "Up to 530 horsepower",
+      "torque": "Over 500 lb-ft"
+    },
+    "transmission": {
+      "type": "Single-speed automatic",
+      "drive_type": "Rear-Wheel Drive"
+    },
+    "interior": {
+      "seating_capacity": 5,
+      "materials": "Sustainable and premium materials",
+      "infotainment": "12.3-inch digital instrument cluster, 14.9-inch touchscreen, BMW iDrive system"
+    },
+    "exterior": {
+      "dimensions": {
+        "length": "188.0 inches",
+        "width": "72.9 inches",
+        "height": "56.2 inches",
+        "wheelbase": "112.8 inches"
+      },
+      "features": [
+        "Distinctive BMW kidney grille with integrated camera technology",
+        "LED headlights and taillights",
+        "Aerodynamic design elements",
+        "Power-folding side mirrors"
+      ],
+      "colors": [
+        "Alpine White",
+        "Capparis White",
+        "Mineral Grey",
+        "Jet Black",
+        "Snapper Rocks Blue"
+      ]
+    },
+    "performance": {
+      "0_to_60mph": "Around 4 seconds",
+      "top_speed": "Over 120 mph",
+      "regenerative_braking": "Adjustable regenerative braking system"
+    },
+    "price": {
+      "starting_price": "$55,000",
+      "max_price": "$65,000+ (depending on trim and options)"
+    },
+    "imageLg": "https://i.ibb.co/94D70S6/Marceds-benz-a.jpg",
+    "imageM": "https://i.ibb.co/6PGmR0f/Marceds-benz-m.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Range Rover",
+    "year": 2023,
+    "manufacturer": "Land Rover",
+    "body_style": "SUV",
+    "engine": {
+      "type": "Supercharged V8",
+      "displacement": "5.0 L",
+      "horsepower": 518,
+      "torque": "461 lb-ft"
+    },
+    "transmission": {
+      "type": "8-Speed Automatic",
+      "drive_type": "All-Wheel Drive"
+    },
+    "interior": {
+      "seating_capacity": 5,
+      "materials": "Premium leather, wood veneers, and metal accents",
+      "infotainment": "12.3-inch touchscreen, navigation, Meridian audio system"
+    },
+    "exterior": {
+      "dimensions": {
+        "length": "196.9 inches",
+        "width": "87.4 inches",
+        "height": "73.6 inches",
+        "wheelbase": "115 inches"
+      },
+      "features": [
+        "Iconic Range Rover design with clamshell hood",
+        "LED headlights and taillights",
+        "Panoramic roof",
+        "Power tailgate"
+      ],
+      "colors": [
+        "Santorini Black",
+        "Fuji White",
+        "Yulong White",
+        "Carpathian Grey",
+        "Firenze Red"
+      ]
+    },
+    "performance": {
+      "0_to_60mph": "5.1 seconds",
+      "top_speed": "130 mph",
+      "fuel_economy": {
+        "city": "17 mpg",
+        "highway": "23 mpg",
+        "combined": "19 mpg"
+      }
+    },
+    "price": {
+      "starting_price": "$90,000",
+      "max_price": "$130,000+ (depending on trim and options)"
+    },
+    "imageLg": "https://i.ibb.co/BzsGGLM/Rectangle-4.png",
+    "imageM": "https://i.ibb.co/bH7LxWB/Rectangle-1448.png"
+  }
+]

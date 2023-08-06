@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Card = () => {
-  const imageUrl = "https://i.ibb.co/1R0vT3s/Rectangle-1365.png";
-  const imageUrl2 = "https://i.ibb.co/c1f2Zmm/Rectangle-1366-1.png";
+  const [Cards, setCards] = useState([]);
+
+  useEffect(() => {
+    // Fetch the JSON data
+    fetch("/src/assets/CardData.json")
+      .then((response) => response.json())
+      .then((data) => setCards(data))
+      .catch((error) => console.error("Error fetching data:", error));
+      console.log(Cards)
+  }, []);
+
+  // const imageUrl = "https://i.ibb.co/1R0vT3s/Rectangle-1365.png";
+  // const imageUrl2 = "https://i.ibb.co/c1f2Zmm/Rectangle-1366-1.png";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 px-3 lg:px-8 ">
-      <div className="relative w-full h-auto overflow-hidden">
+      {Cards.map((card)=>(
+        <div key={Cards.id} className="relative w-full h-auto overflow-hidden">
         <img
-          src={imageUrl}
+          src={card.imageLg}
           alt="Your Image"
           className="object-cover w-full h-full"
         />
@@ -17,16 +29,17 @@ const Card = () => {
           style={{ fontFamily: "Gotham, sans-serif" }}
         >
           <p className=" text-xl sm:text-xl md:text-xl lg:text-2xl font-bold">
-            Trade-In
+            {card.title}
           </p>
-          <p className="text-[14px] ">Exchange your old car with new one</p>
+          <p className="text-[14px] ">{card.subTitle}</p>
           <p className=" text-[13px] underline mt-4 sm:mt-2 md:mt-2 lg:mt-8 font-semibold">
             Explore Details
           </p>
         </div>
       </div>
+      ))}    
 
-      <div className="relative bg-[#D9D9D9] w-full h-auto overflow-hidden">
+      {/* <div className="relative bg-[#D9D9D9] w-full h-auto overflow-hidden">
         <img
           src={imageUrl2}
           alt="Your Image"
@@ -44,7 +57,7 @@ const Card = () => {
             Explore Details
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
