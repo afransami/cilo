@@ -5,7 +5,7 @@ import { RiEqualLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/cilologo.svg";
+import Logo from "../../../assets/image 1.svg";
 
 
 
@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="">
             <div className="hidden md:block">
               <ul
-                className="flex items-center justify-center gap-10 px-8 lg:gap-20 text-white "
+                className="flex items-center justify-center gap-10 px-0 lg:gap-20 text-white "
                 style={{ fontFamily: "Gotham, sans-serif" }}
               >
                 <li className=" hover:text-gray-900 cursor-pointer hidden md:block">

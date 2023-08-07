@@ -15,7 +15,7 @@ const SwipperSliderNew = () => {
 
   useEffect(() => {
     // Fetch the JSON data
-    fetch("/src/assets/SliderData.json")
+    fetch("/SliderData.json")
       .then((response) => response.json())
       .then((data) => setSlides(data))
       .catch((error) => console.error("Error fetching data:", error));

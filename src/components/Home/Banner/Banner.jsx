@@ -7,7 +7,7 @@ const Banner = () => {
 
   useEffect(() => {
     // Fetch the JSON data
-    fetch("/src/assets/BannerData.json")
+    fetch("/BannerData.json")
       .then((response) => response.json())
       .then((data) => setCards(data))
       .catch((error) => console.error("Error fetching data:", error));

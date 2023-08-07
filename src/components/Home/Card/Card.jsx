@@ -5,7 +5,7 @@ const Card = () => {
 
   useEffect(() => {
     // Fetch the JSON data
-    fetch("/src/assets/CardData.json")
+    fetch("/CardData.json")
       .then((response) => response.json())
       .then((data) => setCards(data))
       .catch((error) => console.error("Error fetching data:", error));
