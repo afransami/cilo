@@ -43,17 +43,17 @@
       ]
     },
     "performance": {
-      "0_to_60mph": "4.5 seconds",
-      "top_speed": "155 mph (electronically limited)",
+      "zero_to_60mph": "4.5",
+      "top_speed": "155",
       "fuel_economy": {
-        "city": "12 mpg",
-        "highway": "20 mpg",
-        "combined": "15 mpg"
+        "city": "12",
+        "highway": "20",
+        "combined": "15"
       }
     },
     "price": {
       "starting_price": "$450,000",
-      "max_price": "$500,000+ (depending on customization)"
+      "max_price": "$500,000"
     },
     "imageLg": "https://i.ibb.co/v1K4Mhr/Rectangle-2.png",
     "imageM": "https://i.ibb.co/tcZqyBh/Rectangle-2-1.png"
@@ -106,13 +106,13 @@
       ]
     },
     "performance": {
-      "0_to_60mph": "Around 4 seconds",
-      "top_speed": "Over 120 mph",
+      "zero_to_60mph": "4",
+      "top_speed": "120",
       "regenerative_braking": "Adjustable regenerative braking system"
     },
     "price": {
       "starting_price": "$55,000",
-      "max_price": "$65,000+ (depending on trim and options)"
+      "max_price": "$65,000"
     },
     "imageLg": "https://i.ibb.co/94D70S6/Marceds-benz-a.jpg",
     "imageM": "https://i.ibb.co/6PGmR0f/Marceds-benz-m.jpg"
@@ -160,12 +160,12 @@
       ]
     },
     "performance": {
-      "0_to_60mph": "5.1 seconds",
-      "top_speed": "130 mph",
+      "zero_to_60mph": "5.1",
+      "top_speed": "130",
       "fuel_economy": {
-        "city": "17 mpg",
-        "highway": "23 mpg",
-        "combined": "19 mpg"
+        "city": "17",
+        "highway": "23",
+        "combined": "19"
       }
     },
     "price": {

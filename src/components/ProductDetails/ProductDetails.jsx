@@ -5,11 +5,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styless.css";
 import { Pagination, Navigation } from "swiper/modules";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Modal from "../Utils/Modal/Modal";
 import ArrowUp from "../Utils/ArrowUp/ArrowUp";
 import { IoIosAlert } from "react-icons/Io";
 import ToggleSwitch from "../Utils/TwoButton/ToggleButtons";
+import App from "../Utils/FeaturedButton/App";
+
+
 
 const ProductDetails = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -128,8 +131,7 @@ const ProductDetails = (props) => {
             >
               ❯
             </button>
-          </div>
-
+          </div>          
           <div
             className="rounded-t-lg lg:flex items-center cursor-pointer lg:w-1/4 w-full justify-center lg:gap-6 gap-2 bg-gray-200  py-4 lg:left-[40%] lg:-translate-x-[45%] "
             style={{
@@ -148,6 +150,7 @@ const ProductDetails = (props) => {
               </div>
             </div>
           </div>
+          
         </div>
 
         <div className="col-span-2 h-screen overflow-scroll px-2 min-w-full">
@@ -183,84 +186,65 @@ const ProductDetails = (props) => {
           <br />
 
           <div>
-            <div>
-            {/* {product?.performance.map((item)=>(
-              <p key={item.i}>{item.city} {item.highway} {item.combined}</p>
-            ))} */}
-            
-            
-            <p>Range (EPA est.)</p>
+            <br />
+            <div className="flex items-center justify-between flex-col gap-4">
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-2xl font-bold">
+                  {product.performance.fuel_economy?.city}
+                  <small className="text-xs"> mpg city</small>
+                </span>
+                <br />
+                <span className="text-2xl font-bold">
+                  {product.performance.fuel_economy?.highway}
+                  <small className="text-xs"> mpg highway</small>
+                </span>
+                <br />
+                <span className="text-2xl font-bold">
+                  {product.performance.fuel_economy?.combined}
+                  <small className="text-xs"> mpg combined</small>
+                </span>
+              </div>
+              <p className="text-center">Range (EPA est.)</p>
+              <div className="flex items-center justify-between gap-8">
+                <div>
+                  <p className="text-2xl font-bold">
+                    {product.performance.top_speed}{" "}
+                    <small className="text-xs"> mph</small>
+                  </p>
+                  <p>Top Speed</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold">
+                    {product.performance.zero_to_60mph}
+                    <small className="text-xs"> sec</small>
+                  </p>
+                  <p>0_to_60mph</p>
+                </div>
+              </div>
             </div>
-            <div>
-            <p>{product.performance.top_speed}</p>
-            <p>Range (EPA est.)</p>
-            </div>
-            <div></div>
-
-
-
           </div>
+          <br />
+          <br />
+          <div className="flex items-center justify-start gap-4 text-[16px] mb-2">
+            <p>{product.transmission.type}</p>
+            <p>{product.transmission.drive_type}</p>
+          </div>
+          <div className="flex items-center justify-center text-[16px] font-semibold">
+            <button className="flex items-center justify-between gap-10 border-4 rounded-md border-[#3e6ae1] px-4 py-4 w-full">
+              <span>{product.name}</span>
+              <span>{product.price.starting_price}</span>
+            </button>
+          </div><br />
+          <div className="text-sm text-center">
+          All prices are shown without potential incentives or gas savings of $6,600.<span className="underline"><Link className="text-sm">Learn More</Link></span>
+          </div><br />
+<App></App>
 
-          <p>{product.performance.top_speed}</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut at
-            minus omnis illo dolores accusamus soluta accusantium, dolore,
-            aliquam cupiditate maiores laboriosam blanditiis beatae ab illum!
-            Magnam quo possimus dolorem saepe ab ipsum odio illo nobis, dolorum
-            excepturi vero aliquid. Non eos, iure deserunt inventore magni nihil
-            vitae molestias quis incidunt porro modi odio atque nam, eligendi
-            quam maiores laborum quo ratione! Illo quos delectus animi velit
-            iure, culpa voluptatem quae fugiat sit, corporis quia sunt aliquid
-            unde repellat inventore similique sequi beatae! Tenetur porro
-            tempora deleniti laudantium quia illo. Tenetur assumenda reiciendis
-            aliquam mollitia illum voluptate eius sapiente sit quo, sequi
-            tempore, ea eum quas eos tempora facere obcaecati eveniet nostrum
-            aperiam recusandae in fugiat? Minus earum error dicta voluptatibus,
-            libero recusandae numquam nisi. Placeat consequatur tempore non,
-            rerum velit, dignissimos facilis perferendis sint, incidunt quam
-            architecto commodi! Saepe in autem consectetur. Commodi, iure
-            libero? Eius labore cupiditate numquam quibusdam, tempora sit
-            laborum repellat, sunt veritatis facilis expedita. Repudiandae odio
-            dicta eum quos deserunt distinctio porro. Consectetur veniam,
-            provident odio excepturi cum optio, vitae vero, nihil fugiat harum
-            sint voluptatibus amet tenetur! A, dignissimos! Eius atque non
-            aliquid fuga, quis odit nisi reprehenderit temporibus ullam,
-            mollitia explicabo dignissimos autem velit nobis, tempora nam quae
-            ducimus. Fugiat cupiditate perspiciatis debitis itaque odit sit
-            labore soluta inventore, harum consectetur nam aspernatur repellat
-            minima nisi dolores dolore quidem fuga cumque quod odio molestias
-            accusantium voluptas minus corporis? Facere quam blanditiis,
-            perspiciatis totam modi eveniet quod in, quia dolorem tempora
-            exercitationem eum facilis tempore possimus voluptas voluptatem amet
-            voluptate enim nam magnam explicabo ipsa. Soluta exercitationem sed
-            id veritatis expedita odit ducimus corrupti, excepturi corporis quae
-            eum dolor temporibus optio, dolorum aliquam quis officia. Vitae
-            itaque sunt placeat quibusdam accusamus, iusto similique consectetur
-            molestias deserunt, suscipit inventore, nobis autem? Laudantium
-            temporibus saepe nemo neque quisquam maxime tempore iure! Ea quam,
-            repellendus vel deserunt commodi tenetur velit, est quibusdam ullam
-            odio tempore labore incidunt mollitia molestias reprehenderit eius
-            quis ipsa repudiandae enim quas, deleniti esse? Sequi animi ratione
-            eos architecto, eaque dignissimos quae neque vel, voluptates
-            praesentium enim. Quisquam autem labore unde, consequatur maiores
-            quam accusamus exercitationem. Doloremque, quaerat iste totam optio
-            tempora nemo ratione architecto error corrupti praesentium molestiae
-            repudiandae? Nostrum quae ipsa cumque distinctio eos saepe itaque
-            suscipit cum officiis ea. Officia distinctio quasi doloribus tempora
-            dolore! Quis blanditiis, consequuntur ipsa alias eos reiciendis
-            nesciunt magni accusantium animi voluptatum minus quo laborum
-            officiis eveniet necessitatibus quae laudantium quidem, neque id in?
-            Harum ducimus quae voluptas debitis, tempora vel sint libero
-            doloribus accusamus amet nihil perferendis hic architecto dolore
-            omnis quisquam officia similique blanditiis. Libero quaerat
-            quibusdam commodi soluta deleniti omnis explicabo dolorem assumenda,
-            qui distinctio deserunt sit numquam minima tempora, atque recusandae
-            non esse, nemo et saepe doloribus sapiente. At dolorum ad accusamus
-            quo cumque odit. Unde vero numquam delectus magnam nihil et. Ducimus
-            quaerat, sunt illum sint necessitatibus culpa doloribus reiciendis
-            amet doloremque cupiditate dolor! Fugiat fuga minus incidunt ipsam
-            provident eveniet exercitationem obcaecati ab maiores iste, odio
-            aperiam ad maxime.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error
+            facere similique? Ullam veritatis rerum quibusdam, unde doloremque
+            in quam eius, soluta assumenda perspiciatis adipisci aperiam tenetur
+            omnis delectus magni.
           </p>
         </div>
       </div>
