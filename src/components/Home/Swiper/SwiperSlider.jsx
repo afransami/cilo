@@ -96,37 +96,7 @@ const SwiperSlider = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-
-      {/* <div className="relative">
-        <div className="carousel carousel-center rounded-box gap-4">
-          <div id="slide1" className="carousel-item">
-            <img className="" src={imageUrl1} alt="Pizza" />
-          </div>
-
-          <div className="carousel-item">
-            <img src={imageUrl2} alt="Pizza" />
-          </div>
-          <div className="carousel-item">
-            <img src={imageUrl3} alt="Pizza" />
-          </div>
-        </div>
-
-        
-        <div id="slide4" className="absolute flex items-center justify-between">
-              <a
-                href="#slide4"
-                className="absolute btn bg-black text-white btn-square rounded-none btn-sm mr-5"
-              >
-                ❮
-              </a>     
-              <a
-                href="#slide4"
-                className=" btn bg-black text-white btn-square rounded-none btn-sm mr-5"
-              >
-                ❯
-              </a>          
-            </div>
-      </div> */}
+  
     </>
   );
 };

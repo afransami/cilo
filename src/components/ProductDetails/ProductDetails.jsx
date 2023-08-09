@@ -11,7 +11,7 @@ import ArrowUp from "../Utils/ArrowUp/ArrowUp";
 import { IoIosAlert } from "react-icons/Io";
 import ToggleSwitch from "../Utils/TwoButton/ToggleButtons";
 import App from "../Utils/FeaturedButton/App";
-import NewSlide from "./NewSlide";
+
 
 
 
@@ -239,16 +239,17 @@ const ProductDetails = (props) => {
           <div className="text-sm text-center">
           All prices are shown without potential incentives or gas savings of $6,600.<span className="underline"><Link className="text-sm">Learn More</Link></span>
           </div><br />
-<App></App>
-<NewSlide></NewSlide>
 
+          <App></App>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error
             facere similique? Ullam veritatis rerum quibusdam, unde doloremque
             in quam eius, soluta assumenda perspiciatis adipisci aperiam tenetur
             omnis delectus magni.
           </p>
+         
         </div>
+        
       </div>
     </div>
   );

@@ -1,22 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation"; // Import navigation styles
+import "swiper/css/navigation"; 
 import "./styles.css";
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
 
 const SwipperSliderNew = () => {
   const [Slides, setSlides] = useState([]);
 
-  useEffect(() => {
-    // Fetch the JSON data
-    fetch("/SliderData.json")
-      .then((response) => response.json())
+  useEffect(() => {    
+    fetch ("/SliderData.json")      
+      .then ((response) => response.json())
       .then((data) => setSlides(data))
       .catch((error) => console.error("Error fetching data:", error));
       console.log(Slides)
@@ -36,9 +32,6 @@ const SwipperSliderNew = () => {
     }
   };
 
-  // const imageUrl1 = "https://i.ibb.co/NsptGDG/Rectangle-6-2.png";
-  // const imageUrl2 = "https://i.ibb.co/MnVJYzR/Rectangle-6-2.png";
-  // const imageUrl3 = "https://i.ibb.co/my74Q22/Rectangle-6-2.png";
 
   return (
     <div style={{ position: "relative" }}>
@@ -50,8 +43,8 @@ const SwipperSliderNew = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={false} // Disable default navigation 
-        modules={[Pagination, Navigation]} // Add both Pagination and Navigation modules       
+        navigation={false}
+        modules={[Pagination, Navigation]}       
         className="mySwiper"
         breakpoints={{          
           320: {
@@ -81,79 +74,7 @@ const SwipperSliderNew = () => {
           </div>
         </SwiperSlide>
         ))}
-        
-
-        {/* <SwiperSlide className="">
-          <div className="relative w-full">
-            <img src={imageUrl2} alt="Your Image" className="w-full h-auto" />
-
-            <div
-              className="absolute left-0 w-full h-full flex flex-col justify-center items-center"
-              style={{ fontFamily: "Gotham, sans-serif" }}
-            >
-               <p className="vtitle font-bold">
-                Marcedes Benz-A
-              </p>
-              <p className="underline">
-                Explore Details
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative w-full">
-            <img src={imageUrl3} alt="Your Image" className="w-full h-auto" />
-
-            <div
-              className="absolute left-0 w-full h-full flex flex-col justify-center items-center"
-              style={{ fontFamily: "Gotham, sans-serif" }}
-            >
-              <p className="vtitle font-bold">
-                Huyundai Santa
-              </p>
-              <p className="underline">
-                Explore Details
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative w-full">
-            <img src={imageUrl3} alt="Your Image" className="w-full h-auto" />
-
-            <div
-              className="absolute left-0 w-full h-full flex flex-col justify-center items-center"
-              style={{ fontFamily: "Gotham, sans-serif" }}
-            >
-              <p className="vtitle font-bold">
-                Huyundai Santa
-              </p>
-              <p className="underline">
-                Explore Details
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative w-full">
-            <img src={imageUrl3} alt="Your Image" className="w-full h-auto" />
-
-            <div
-              className="absolute left-0 w-full h-full flex flex-col justify-center items-center"
-              style={{ fontFamily: "Gotham, sans-serif" }}
-            >
-              <p className="vtitle font-bold">
-                Huyundai Santa
-              </p>
-              <p className="underline">
-                Explore Details
-              </p>
-            </div>
-          </div>
-        </SwiperSlide> */}
+  
       </Swiper>
 
       <div
@@ -162,7 +83,7 @@ const SwipperSliderNew = () => {
           top: "50%",
           left: "10px",
           transform: "translateY(-50%)",
-          zIndex: 1, // Set a higher z-index to place it in front of slides
+          zIndex: 1, 
         }}
       >
         <button
@@ -178,7 +99,7 @@ const SwipperSliderNew = () => {
           top: "50%",
           right: "10px",
           transform: "translateY(-50%)",
-          zIndex: 1, // Set a higher z-index to place it in front of slides
+          zIndex: 1,
         }}
       >
         <button

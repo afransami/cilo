@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./SlideStyles.css";
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 const SwiperSlideModal = ({ isOpen, onClose }) => {
   const [cards, setCards] = useState([]);
@@ -19,13 +19,9 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
     console.log(cards);
   }, []);
   
-  const [swiper, setSwiper] = useState(null);
+
   const swiperRef = useRef(null);
-  const swiperParams = {
-    spaceBetween: 30,
-    slidesPerView: 1,
-    centeredSlides: true,
-  };
+  
 
     const goNext = () => {
     if (swiperRef && swiperRef.current) {
@@ -42,19 +38,19 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
   
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center backdrop-blur-sm z-50 ${
+      className={`fixed inset-0  flex items-center justify-center backdrop-blur-sm z-50 bg-gray-900 bg-opacity-60 ${
         isOpen ? "block" : "hidden"
       }`}
     >
-      <div className=" inset-0 bg-black bg-opacity-50"></div>
-      <div className="relative bg-white rounded-lg p-6 max-w-3xl h-auto">
+      <div className="inset-0 bg-black bg-opacity-50"></div>
+      <div className=" relative bg-white rounded-lg p-6 max-w-4xl h-auto">
         <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+          className="absolute top-0 right-4 text-gray-500 hover:text-gray-800"
           onClick={onClose}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-6 w-6 absolute"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -67,16 +63,41 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             />
           </svg>
         </button>
-        <Swiper {...swiperParams} getSwiper={setSwiper} navigation={true}
-        modules={[Pagination, Navigation]} >
-          <SwiperSlide>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+        <Swiper 
+        ref={swiperRef}
+        slidesPerView={1}                
+        spaceBetween={20} 
+        grabCursor={true}       
+        navigation={false}
+        modules={[Navigation]}  
+        className="mySwiper" >
+          
+          <SwiperSlide >
+           <div>
+           <p>performance</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
             nostrum eum! Pariatur repellendus, dicta alias ut similique facere
             fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
             voluptate placeat aspernatur totam dignissimos recusandae! Vel
             sapiente maxime sed assumenda quasi architecto ab illo illum nisi
             laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
-            eum ipsum quo quibusdam{" "}
+            eum ipsum quo quibusdam
+            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
+            voluptate placeat aspernatur totam dignissimos recusandae! Vel
+            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
+            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
+            eum ipsum quo quibusdam
+            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
+            voluptate placeat aspernatur totam dignissimos recusandae! Vel
+            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
+            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
+            eum ipsum quo quibusdam
+            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
+            voluptate placeat aspernatur totam dignissimos recusandae! Vel
+            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
+            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
+            eum ipsum quo quibusdam</p>
+           </div>
           </SwiperSlide>
           <SwiperSlide>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
@@ -96,6 +117,7 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
             eum ipsum quo quibusdam{" "}
           </SwiperSlide>
+          
 
           {/* Add more slides as needed */}
         </Swiper>
@@ -103,9 +125,9 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             style={{
               position: "absolute",
               top: "50%",
-              left: "10px",
+              left: "5px",
               transform: "translateY(-50%)",
-              zIndex: 1, // Set a higher z-index to place it in front of slides
+              zIndex: 1, 
             }}
           >
             <button
@@ -119,9 +141,9 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             style={{
               position: "absolute",
               top: "50%",
-              right: "10px",
+              right: "5px",
               transform: "translateY(-50%)",
-              zIndex: 1, // Set a higher z-index to place it in front of slides
+              zIndex: 1, 
             }}
           >
             <button

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import SwiperSlideModal from '../ModalSlide/SwiperSlideModal';
-
+import React, { useState } from "react";
+import SwiperSlideModal from "../ModalSlide/SwiperSlideModal";
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,12 +13,17 @@ const App = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <button className="bg-blue-500 text-white py-2 px-4 rounded" onClick={handleOpenModal}>
-        Open Swiper Modal
+    <div className="flex  justify-center items-center">
+      <button
+        className="bg-gray-100 py-1 px-6 rounded"
+        onClick={handleOpenModal}
+      >
+        Feature Details
       </button>
 
-      <SwiperSlideModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <div>
+        <SwiperSlideModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      </div>
     </div>
   );
 };

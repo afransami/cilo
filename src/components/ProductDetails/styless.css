@@ -42,13 +42,13 @@ body {
 
 
 /* Custom Swiper styles */
-.swiper-pagination-bullet-active {
-  background-color: black; /* Active dot color */
+/* .swiper-pagination-bullet-active {
+  background-color: black; 
 }
 
 .swiper-pagination-bullet {
-  background-color: gray; /* Upcoming dot color */
-}
+  background-color: gray; 
+} */
 
 
 /* @media (max-width: 768px) {

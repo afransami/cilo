@@ -43,33 +43,10 @@ body {
 
 /* Custom Swiper styles */
 .swiper-pagination-bullet-active {
-  background-color: black; /* Active dot color */
+  background-color: black; 
 }
 
 .swiper-pagination-bullet {
-  background-color: gray; /* Upcoming dot color */
+  background-color: gray; 
 }
 
-
-/* @media (max-width: 768px) {
-  .underline {
-    font-size: 13px;
-    
-  }
-  
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
- .underline {
-    font-size: 15px;
-    
-  }
-  
-}
-
-@media (min-width: 1025px) {
-  .underline {
-    font-size: 16px;
-  }
-} */
