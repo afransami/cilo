@@ -11,6 +11,7 @@ import ArrowUp from "../Utils/ArrowUp/ArrowUp";
 import { IoIosAlert } from "react-icons/Io";
 import ToggleSwitch from "../Utils/TwoButton/ToggleButtons";
 import App from "../Utils/FeaturedButton/App";
+import NewSlide from "./NewSlide";
 
 
 
@@ -153,7 +154,7 @@ const ProductDetails = (props) => {
           
         </div>
 
-        <div className="col-span-2 h-screen overflow-scroll px-2 min-w-full">
+        <div className="col-span-2 h-screen overflow-scroll px-2 min-w-full bg-white">
           <div className="flex flex-col items-center justify-center">
             <p className="vtitle font-bold flex items-center justify-center pt-[20%] ">
               {product.name}
@@ -239,6 +240,7 @@ const ProductDetails = (props) => {
           All prices are shown without potential incentives or gas savings of $6,600.<span className="underline"><Link className="text-sm">Learn More</Link></span>
           </div><br />
 <App></App>
+<NewSlide></NewSlide>
 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error

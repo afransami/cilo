@@ -1,11 +1,24 @@
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 import React, { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import styles from "./styles.css";
+import "./SlideStyles.css";
+import { Pagination, Navigation } from 'swiper/modules';
 
 const SwiperSlideModal = ({ isOpen, onClose }) => {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    // Fetch the JSON data
+    fetch("/BannerData.json")
+      .then((response) => response.json())
+      .then((data) => setCards(data))
+      .catch((error) => console.error("Error fetching data:", error));
+    console.log(cards);
+  }, []);
+  
   const [swiper, setSwiper] = useState(null);
   const swiperRef = useRef(null);
   const swiperParams = {
@@ -14,7 +27,7 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
     centeredSlides: true,
   };
 
-  const goNext = () => {
+    const goNext = () => {
     if (swiperRef && swiperRef.current) {
       swiperRef.current.swiper.slideNext();
     }
@@ -26,16 +39,7 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
     }
   };
 
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    // Fetch the JSON data
-    fetch("/BannerData.json")
-      .then((response) => response.json())
-      .then((data) => setCards(data))
-      .catch((error) => console.error("Error fetching data:", error));
-    console.log(cards);
-  }, []);
+  
   return (
     <div
       className={`fixed inset-0 flex items-center justify-center backdrop-blur-sm z-50 ${
@@ -63,7 +67,8 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             />
           </svg>
         </button>
-        <Swiper {...swiperParams} getSwiper={setSwiper}>
+        <Swiper {...swiperParams} getSwiper={setSwiper} navigation={true}
+        modules={[Pagination, Navigation]} >
           <SwiperSlide>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
             nostrum eum! Pariatur repellendus, dicta alias ut similique facere
@@ -94,6 +99,38 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
 
           {/* Add more slides as needed */}
         </Swiper>
+        <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "10px",
+              transform: "translateY(-50%)",
+              zIndex: 1, // Set a higher z-index to place it in front of slides
+            }}
+          >
+            <button
+              className="text-black rounded-md text-[20px] ml-3 btn btn-sm "
+              onClick={goPrev}
+            >
+              ❮
+            </button>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: "10px",
+              transform: "translateY(-50%)",
+              zIndex: 1, // Set a higher z-index to place it in front of slides
+            }}
+          >
+            <button
+              className="text-black text-[20px] mr-3 btn btn-sm rounded-md"
+              onClick={goNext}
+            >
+              ❯
+            </button>
+          </div> 
       
       </div>
     </div>

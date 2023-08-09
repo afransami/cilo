@@ -16,7 +16,7 @@
 /* Customize the appearance of the navigation arrows */
 .swiper-button-prev,
 .swiper-button-next  {
-  background-color: rgb(14, 1, 1); /* Add your desired background color */
+  background-color: rgb(14, 1, 1);   
   color: #fff !important; /* Add your desired text color */
   padding: 8px; /* Add padding to create a larger clickable area */
   cursor: pointer;

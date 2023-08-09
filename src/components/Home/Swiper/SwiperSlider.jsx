@@ -51,7 +51,7 @@ const SwiperSlider = () => {
               style={{ fontFamily: "Gotham, sans-serif" }}
             >
               <p className=" text-lg sm:text-base md:text-2xl lg:text-4xl font-bold">
-                vtitleta Fortuner
+                Toyota Fortuner
               </p>
               <p className=" text-[14px] underline mt-4 sm:mt-2 md:mt-6 lg:mt-8">
                 Explore Details
