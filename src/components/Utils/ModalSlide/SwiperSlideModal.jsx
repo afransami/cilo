@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";
@@ -6,19 +5,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./SlideStyles.css";
 import { Navigation } from 'swiper/modules';
+import { useParams } from 'react-router-dom';
 
 const SwiperSlideModal = ({ isOpen, onClose }) => {
-  const [cards, setCards] = useState([]);
 
-  useEffect(() => {
-    // Fetch the JSON data
-    fetch("/BannerData.json")
-      .then((response) => response.json())
-      .then((data) => setCards(data))
-      .catch((error) => console.error("Error fetching data:", error));
-    console.log(cards);
-  }, []);
-  
+  const [card, setCard] = useState(null);
+  const { cardId } = useParams();
 
   const swiperRef = useRef(null);
   
@@ -35,7 +27,25 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
     }
   };
 
-  
+
+  useEffect(() => {
+    fetch("/public/BannerData.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const cardDetails = data.find(
+          (item) => item.id === parseInt(cardId)
+        );
+        setCard(cardDetails);
+      })
+      .catch((error) =>
+        console.error("Error fetching card details:", error)
+      );
+  }, [cardId]);
+
+  if (!card) {
+    return <div className="lg:mt-12 mt-6">Loading...</div>;
+  }
+
   return (
     <div
       className={`fixed inset-0  flex items-center justify-center backdrop-blur-sm z-50 bg-gray-900 bg-opacity-60 ${
@@ -43,7 +53,7 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
       }`}
     >
       <div className="inset-0 bg-black bg-opacity-50"></div>
-      <div className=" relative bg-white rounded-lg p-6 max-w-4xl h-auto">
+      <div className=" relative bg-white rounded-lg p-6 max-w-4xl h-[400px]">
         <button
           className="absolute top-0 right-4 text-gray-500 hover:text-gray-800"
           onClick={onClose}
@@ -66,37 +76,20 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
         <Swiper 
         ref={swiperRef}
         slidesPerView={1}                
-        spaceBetween={20} 
+        spaceBetween={20}        
         grabCursor={true}       
         navigation={false}
         modules={[Navigation]}  
-        className="mySwiper" >
+        className="mySwiper"       
+         >
           
           <SwiperSlide >
            <div>
-           <p>performance</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-            nostrum eum! Pariatur repellendus, dicta alias ut similique facere
-            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
-            voluptate placeat aspernatur totam dignissimos recusandae! Vel
-            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
-            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
-            eum ipsum quo quibusdam
-            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
-            voluptate placeat aspernatur totam dignissimos recusandae! Vel
-            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
-            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
-            eum ipsum quo quibusdam
-            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
-            voluptate placeat aspernatur totam dignissimos recusandae! Vel
-            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
-            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
-            eum ipsum quo quibusdam
-            fuga dolores quod porro et commodi earum ipsa dolor eius quibusdam
-            voluptate placeat aspernatur totam dignissimos recusandae! Vel
-            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
-            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
-            eum ipsum quo quibusdam</p>
+           <p className='font-bold text-xl'>Range and Performance</p>
+            <p>Acceleration 0-60 mph</p>
+            <span>
+              {item.name}
+             </span>
            </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -106,6 +99,15 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             voluptate placeat aspernatur totam dignissimos recusandae! Vel
             sapiente maxime sed assumenda quasi architecto ab illo illum nisi
             laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
+            voluptate placeat aspernatur totam dignissimos recusandae! Vel
+            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
+            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
+            voluptate placeat aspernatur totam dignissimos recusandae! Vel
+            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
+            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
+            voluptate placeat aspernatur totam dignissimos recusandae! Vel
+            sapiente maxime sed assumenda quasi architecto ab illo illum nisi
+            laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
             eum ipsum quo quibusdam{" "}
           </SwiperSlide>
           <SwiperSlide>
@@ -117,9 +119,7 @@ const SwiperSlideModal = ({ isOpen, onClose }) => {
             laborum harum hic, vero deleniti itaque labore sunt! Consequatur,
             eum ipsum quo quibusdam{" "}
           </SwiperSlide>
-          
-
-          {/* Add more slides as needed */}
+         
         </Swiper>
         <div
             style={{

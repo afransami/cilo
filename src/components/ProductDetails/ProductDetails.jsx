@@ -12,12 +12,19 @@ import { IoIosAlert } from "react-icons/Io";
 import ToggleSwitch from "../Utils/TwoButton/ToggleButtons";
 import App from "../Utils/FeaturedButton/App";
 
-
-
-
 const ProductDetails = (props) => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -132,7 +139,7 @@ const ProductDetails = (props) => {
             >
               ❯
             </button>
-          </div>          
+          </div>
           <div
             className="rounded-t-lg lg:flex items-center cursor-pointer lg:w-1/4 w-full justify-center lg:gap-6 gap-2 bg-gray-200  py-4 lg:left-[40%] lg:-translate-x-[45%] "
             style={{
@@ -151,7 +158,6 @@ const ProductDetails = (props) => {
               </div>
             </div>
           </div>
-          
         </div>
 
         <div className="col-span-2 h-screen overflow-scroll px-2 min-w-full bg-white">
@@ -235,21 +241,26 @@ const ProductDetails = (props) => {
               <span>{product.name}</span>
               <span>{product.price.starting_price}</span>
             </button>
-          </div><br />
+          </div>
+          <br />
           <div className="text-sm text-center">
-          All prices are shown without potential incentives or gas savings of $6,600.<span className="underline"><Link className="text-sm">Learn More</Link></span>
-          </div><br />
+            All prices are shown without potential incentives or gas savings of
+            $6,600.
+            <span className="underline">
+              <Link className="text-sm">Learn More</Link>
+            </span>
+          </div>
+          <br />
 
           <App></App>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error
             facere similique? Ullam veritatis rerum quibusdam, unde doloremque
             in quam eius, soluta assumenda perspiciatis adipisci aperiam tenetur
             omnis delectus magni.
           </p>
-         
         </div>
-        
       </div>
     </div>
   );
