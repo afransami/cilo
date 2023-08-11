@@ -24,10 +24,10 @@ const router = createBrowserRouter([
         path: "/productDetails/:productId",
         element: <ProductDetails></ProductDetails>
       },
-      // {
-      //   path: "/cardDetails/:cardtId",
-      //   element: <App></App>
-      // },
+      {
+        path: "/cardDetails/:cardId",
+        element: <App></App>
+      },
     ],
   },
 ]);

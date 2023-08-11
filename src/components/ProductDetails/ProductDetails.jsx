@@ -11,6 +11,7 @@ import ArrowUp from "../Utils/ArrowUp/ArrowUp";
 import { IoIosAlert } from "react-icons/Io";
 import ToggleSwitch from "../Utils/TwoButton/ToggleButtons";
 import App from "../Utils/FeaturedButton/App";
+import { MdSportsBaseball } from "react-icons/md";
 
 const ProductDetails = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -98,7 +99,7 @@ const ProductDetails = (props) => {
             }}
           >
             <SwiperSlide className="min-w-full h-screen ">
-              <div className="relative ">
+              <div className="relative">
                 <img
                   src={product.imageLg}
                   alt="Your Image"
@@ -166,12 +167,12 @@ const ProductDetails = (props) => {
               {product.name}
             </p>
             <p
-              className="mt-4 text-gray-500 text-md"
-              style={{ letterSpacing: `6px` }}
+              className="mt-4 text-gray-500 text-xl"
+              // style={{ letterSpacing: `3px` }}
             >
-              {product.manufacturer}
+              Model: {product.model}
             </p>
-            <div className="p-8">
+            {/* <div className="p-8">
               <p
                 className="px-4 py-2 cursor-pointer underline rounded flex items-center justify-center gap-2"
                 onClick={handleModalOpen}
@@ -186,57 +187,127 @@ const ProductDetails = (props) => {
                 onClose={handleModalClose}
                 onConfirm={handleConfirm}
               />
-            </div>
+            </div> */}
           </div>
 
-          <ToggleSwitch></ToggleSwitch>
+          {/* <ToggleSwitch></ToggleSwitch> */}
           <br />
 
           <div>
+            <div
+              className="my-4"
+              style={{ borderBottom: "1px solid lightgray" }}
+            ></div>
             <br />
             <div className="flex items-center justify-between flex-col gap-4">
               <div className="flex items-center justify-between gap-4">
-                <span className="text-2xl font-bold">
-                  {product.performance.fuel_economy?.city}
-                  <small className="text-xs"> mpg city</small>
-                </span>
-                <br />
-                <span className="text-2xl font-bold">
-                  {product.performance.fuel_economy?.highway}
-                  <small className="text-xs"> mpg highway</small>
-                </span>
-                <br />
-                <span className="text-2xl font-bold">
-                  {product.performance.fuel_economy?.combined}
-                  <small className="text-xs"> mpg combined</small>
-                </span>
-              </div>
-              <p className="text-center">Range (EPA est.)</p>
-              <div className="flex items-center justify-between gap-8">
-                <div>
-                  <p className="text-2xl font-bold">
-                    {product.performance.top_speed}{" "}
+                <div className="flex items-center justify-center flex-col gap-8 bg-gray-200 p-4 rounded-md font-Montserrat">
+                  <span className="text-2xl font-bold">
+                    {product.performance.range}
+                    <small className="text-xs"> mi</small>
+                  </span>
+                  <p>Range (EPA)</p>
+                </div>
+                <div className="flex items-center justify-center flex-col gap-8 bg-gray-200 p-4 rounded-md font-Montserrat">
+                  <span className="text-2xl font-bold">
+                    {product.performance.top_speed}
                     <small className="text-xs"> mph</small>
-                  </p>
+                  </span>
                   <p>Top Speed</p>
                 </div>
-                <div>
-                  <p className="text-2xl font-bold">
+                <div className="flex items-center justify-center flex-col gap-8 bg-gray-200 p-4 rounded-md font-Montserrat">
+                  <span className="text-2xl font-bold">
                     {product.performance.zero_to_60mph}
                     <small className="text-xs"> sec</small>
-                  </p>
-                  <p>0_to_60mph</p>
+                  </span>
+                  <p>0-60 mph</p>
                 </div>
               </div>
+              <br />
+              <App></App>
+            </div>
+            <br />
+            <div
+              className="my-4"
+              style={{ borderBottom: "1px solid lightgray" }}
+            ></div>
+          </div>
+          <br />
+          <p className="text-3xl font-bold font-Montserrat text-center">
+            Drive System
+          </p>
+          <br />
+
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2">
+            <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>Engine</p>
+              <p>Horsepower</p>
+            </div>
+
+            <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>{product.engine.type}</p>
+              <p>{product.engine.horsepower}</p>
             </div>
           </div>
           <br />
           <br />
-          <div className="flex items-center justify-start gap-4 text-[16px] mb-2">
-            <p>{product.transmission.type}</p>
-            <p>{product.transmission.drive_type}</p>
+
+          <p className="text-3xl font-bold font-Montserrat text-center">
+            Wheels & Tires
+          </p><br /><br />
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2">
+            <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>Wheel Dimensions (in)</p>
+              <p>Tire Dimensions (mm)</p>
+            </div>
+
+            <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>{product.wheel.Wheel_Dimensions_in}</p>
+              <p>{product.wheel.Tire_Dimensions_mm}</p>
+            </div>
           </div>
-          <div className="flex items-center justify-center text-[16px] font-semibold">
+          <br />
+          <br />
+
+          <p className="text-3xl font-bold font-Montserrat text-center">
+            Colors
+          </p><br /><br />
+          <div className="flex items-center justify-center gap-4 text-[16px] mb-2">
+            <div className="flex  items-center justify-between gap-4 text-[16px] mb-2">
+              <p className="tooltip" data-tip="Blue"><MdSportsBaseball className=" text-indigo-700 text-7xl cursor-pointer hover:outline-double hover:rotate-90 transition-all hover:scale-125 rounded-full"></MdSportsBaseball></p>
+              <p className="tooltip" data-tip="Red"><MdSportsBaseball className="text-red-600 text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball></p>
+              <p className="tooltip" data-tip="Black"><MdSportsBaseball className="text-black text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball></p>
+              <p className="tooltip" data-tip="Gray"><MdSportsBaseball className="text-gray-700 text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball></p>
+              
+            </div>
+
+            {/* <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>{product.wheel.Wheel_Dimensions_in}</p>
+              <p>{product.wheel.Tire_Dimensions_mm}</p>
+            </div> */}
+          </div>
+          <br />
+          <br />
+
+          <p className="text-3xl font-bold font-Montserrat text-center">
+          Exterior Dimension
+          </p><br /><br />
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2">
+            <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>Length / Width / Height (in)</p>
+              <p>Curb Weight (lbs)</p>
+            </div>
+
+            <div className="flex flex-col items-end justify-between gap-4 text-[16px] mb-2">
+              <p className="font-semibold">{product.exterior.dimensions}</p>
+              <p className="font-semibold">{product.exterior.Curb_Weight_lbs}</p>              
+            </div>
+          </div>
+          <br />
+          <br />
+
+
+          <div className="flex  items-center justify-center text-[16px] font-semibold">
             <button className="flex items-center justify-between gap-10 border-4 rounded-md border-[#3e6ae1] px-4 py-4 w-full">
               <span>{product.name}</span>
               <span>{product.price.starting_price}</span>
@@ -251,8 +322,6 @@ const ProductDetails = (props) => {
             </span>
           </div>
           <br />
-
-          <App></App>
 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error

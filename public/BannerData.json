@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Rolls-Royce Phantom",
+    "model": "Rolls Royce 008",
     "year": 2023,
     "manufacturer": "Rolls-Royce Motor Cars",
     "body_style": "Sedan",
@@ -15,18 +16,18 @@
       "type": "8-Speed Automatic",
       "drive_type": "Rear-Wheel Drive"
     },
+    "wheel": {
+      "Wheel_Dimensions_in": "18 x 7.5 front | 18 x 7.5 rear",
+      "Tire_Dimensions_mm": "225/50 front | 225/50 rear"
+    },
     "interior": {
       "seating_capacity": 5,
       "materials": "Premium leather, wood veneers, and metal accents",
       "infotainment": "12.3-inch touchscreen, navigation, premium audio system"
     },
     "exterior": {
-      "dimensions": {
-        "length": "227.2 inches",
-        "width": "79.4 inches",
-        "height": "64.6 inches",
-        "wheelbase": "139.8 inches"
-      },
+      "dimensions": "227.2 / 79.4 / 64.6",
+      "Curb_Weight_lbs": "4553",      
       "features": [
         "Iconic Rolls-Royce Spirit of Ecstasy ornament",
         "Signature large chrome grille",
@@ -45,17 +46,28 @@
     "performance": {
       "zero_to_60mph": "4.5",
       "top_speed": "155",
-      "fuel_economy": {
-        "city": "12",
-        "highway": "20",
-        "combined": "15"
-      }
+      "range": "155"
+      
     },
     "price": {
       "starting_price": "$450,000",
       "max_price": "$500,000"
     },
+    "exteriorImage": {
+      "backSide": "https://i.ibb.co/k9wwLB9/rear-jpg-bmwimg-xlarge.webp",
+      "topSide": "https://i.ibb.co/XCh8VtC/top-jpg-bmwimg-xlarge.webp",
+      "frontSide": "https://i.ibb.co/TPRhgns/front-jpg-bmwimg-xlarge.webp"
+    },
     "imageLg": "https://i.ibb.co/v1K4Mhr/Rectangle-2.png",
+    "image2": "https://i.ibb.co/3BcG2yN/Image-4.webp",
+    "image3": "https://i.ibb.co/GpGb4J7/Image-2.webp",
+    "image4": "https://i.ibb.co/b3thv4G/Image-1.webp",
+    "image5": "https://i.ibb.co/hMwfy0f/Image-5.webp",
+    "image6": "https://i.ibb.co/1zYZjHQ/image-3.jpg",
+    "image7": "https://i.ibb.co/Jcgzq9T/Image-6.webp",
+    "image8": "https://i.ibb.co/swNr8Qr/Image-9.webp",
+    "image9": "https://i.ibb.co/L0TGVDg/Image-8.webp",
+    "image10": "https://i.ibb.co/QrX4NT5/Image-7.webp",
     "imageM": "https://i.ibb.co/tcZqyBh/Rectangle-2-1.png"
   },
   {
@@ -79,18 +91,18 @@
       "type": "Single-speed automatic",
       "drive_type": "Rear-Wheel Drive"
     },
+    "wheel": {
+      "Wheel_Dimensions_in": "18 x 7.5 front | 18 x 7.5 rear",
+      "Tire_Dimensions_mm": "225/50 front | 225/50 rear"
+    },
     "interior": {
       "seating_capacity": 5,
       "materials": "Sustainable and premium materials",
       "infotainment": "12.3-inch digital instrument cluster, 14.9-inch touchscreen, BMW iDrive system"
     },
     "exterior": {
-      "dimensions": {
-        "length": "188.0 inches",
-        "width": "72.9 inches",
-        "height": "56.2 inches",
-        "wheelbase": "112.8 inches"
-      },
+      "dimensions": "188.0 / 72.9 / 56.2",    
+      "Curb_Weight_lbs": "4553",        
       "features": [
         "Distinctive BMW kidney grille with integrated camera technology",
         "LED headlights and taillights",
@@ -106,10 +118,11 @@
       ]
     },
     "performance": {
-      "zero_to_60mph": "4",
-      "top_speed": "120",
-      "regenerative_braking": "Adjustable regenerative braking system"
+      "zero_to_60mph": "4.5",
+      "top_speed": "155",
+      "range": "155"
     },
+    
     "price": {
       "starting_price": "$55,000",
       "max_price": "$65,000"
@@ -133,40 +146,39 @@
       "type": "8-Speed Automatic",
       "drive_type": "All-Wheel Drive"
     },
+    "wheel": {
+      "Wheel_Dimensions_in": "18 x 7.5 front | 18 x 7.5 rear",
+      "Tire_Dimensions_mm": "225/50 front | 225/50 rear"
+    },
     "interior": {
       "seating_capacity": 5,
       "materials": "Premium leather, wood veneers, and metal accents",
       "infotainment": "12.3-inch touchscreen, navigation, Meridian audio system"
     },
     "exterior": {
-      "dimensions": {
-        "length": "196.9 inches",
-        "width": "87.4 inches",
-        "height": "73.6 inches",
-        "wheelbase": "115 inches"
-      },
+      "dimensions": "196.9 / 87.4 / 73.6",      
+      "Curb_Weight_lbs": "4553",      
       "features": [
         "Iconic Range Rover design with clamshell hood",
         "LED headlights and taillights",
         "Panoramic roof",
         "Power tailgate"
       ],
-      "colors": [
+      "colors": {
+       "name":[
         "Santorini Black",
         "Fuji White",
         "Yulong White",
         "Carpathian Grey",
         "Firenze Red"
-      ]
+      ],
+      "link": "https://i.ibb.co/1G4wFJf/image-3.png"
+    }
     },
     "performance": {
-      "zero_to_60mph": "5.1",
-      "top_speed": "130",
-      "fuel_economy": {
-        "city": "17",
-        "highway": "23",
-        "combined": "19"
-      }
+      "zero_to_60mph": "4.5",
+      "top_speed": "155",
+      "range": "155"
     },
     "price": {
       "starting_price": "$90,000",

@@ -18,7 +18,7 @@ const App = () => {
     <div className="flex  justify-center items-center">
       <Link>
       <button
-        className="bg-gray-100 py-1 px-6 rounded"
+        className="bg-gray-100 py-3 font-semibold font-Montserrat px-6 rounded"
         onClick={handleOpenModal}
         
       >
