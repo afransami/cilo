@@ -21,13 +21,13 @@
       "Tire_Dimensions_mm": "225/50 front | 225/50 rear"
     },
     "interior": {
-      "seating_capacity": 5,
-      "materials": "Premium leather, wood veneers, and metal accents",
-      "infotainment": "12.3-inch touchscreen, navigation, premium audio system"
+      "head_room": "38.2",
+      "Legroom_Front_rear_in": "41.5 / 34.2",
+      "Shoulder_Room_Front_rear_in": "55.2 / 54.3"
     },
     "exterior": {
       "dimensions": "227.2 / 79.4 / 64.6",
-      "Curb_Weight_lbs": "4553",      
+      "Curb_Weight_lbs": "4553",
       "features": [
         "Iconic Rolls-Royce Spirit of Ecstasy ornament",
         "Signature large chrome grille",
@@ -47,28 +47,28 @@
       "zero_to_60mph": "4.5",
       "top_speed": "155",
       "range": "155"
-      
     },
     "price": {
       "starting_price": "$450,000",
       "max_price": "$500,000"
     },
-    "exteriorImage": {
-      "backSide": "https://i.ibb.co/k9wwLB9/rear-jpg-bmwimg-xlarge.webp",
-      "topSide": "https://i.ibb.co/XCh8VtC/top-jpg-bmwimg-xlarge.webp",
-      "frontSide": "https://i.ibb.co/TPRhgns/front-jpg-bmwimg-xlarge.webp"
-    },
-    "imageLg": "https://i.ibb.co/v1K4Mhr/Rectangle-2.png",
-    "image2": "https://i.ibb.co/3BcG2yN/Image-4.webp",
-    "image3": "https://i.ibb.co/GpGb4J7/Image-2.webp",
-    "image4": "https://i.ibb.co/b3thv4G/Image-1.webp",
-    "image5": "https://i.ibb.co/hMwfy0f/Image-5.webp",
-    "image6": "https://i.ibb.co/1zYZjHQ/image-3.jpg",
-    "image7": "https://i.ibb.co/Jcgzq9T/Image-6.webp",
-    "image8": "https://i.ibb.co/swNr8Qr/Image-9.webp",
-    "image9": "https://i.ibb.co/L0TGVDg/Image-8.webp",
-    "image10": "https://i.ibb.co/QrX4NT5/Image-7.webp",
-    "imageM": "https://i.ibb.co/tcZqyBh/Rectangle-2-1.png"
+    "backSide": "https://i.ibb.co/k9wwLB9/rear-jpg-bmwimg-xlarge.webp",
+    "topSide": "https://i.ibb.co/XCh8VtC/top-jpg-bmwimg-xlarge.webp",
+    "frontSide": "https://i.ibb.co/TPRhgns/front-jpg-bmwimg-xlarge.webp",
+
+    
+      "imageLg": "https://i.ibb.co/v1K4Mhr/Rectangle-2.png",
+      "image2": "https://i.ibb.co/3BcG2yN/Image-4.webp",
+      "image3": "https://i.ibb.co/GpGb4J7/Image-2.webp",
+      "image4": "https://i.ibb.co/b3thv4G/Image-1.webp",
+      "image5": "https://i.ibb.co/hMwfy0f/Image-5.webp",
+      "image6": "https://i.ibb.co/1zYZjHQ/image-3.jpg",
+      "image7": "https://i.ibb.co/Jcgzq9T/Image-6.webp",
+      "image8": "https://i.ibb.co/swNr8Qr/Image-9.webp",
+      "image9": "https://i.ibb.co/L0TGVDg/Image-8.webp",
+      "image10": "https://i.ibb.co/QrX4NT5/Image-7.webp",
+      "imageM": "https://i.ibb.co/tcZqyBh/Rectangle-2-1.png"
+     
   },
   {
     "id": 2,
@@ -101,8 +101,8 @@
       "infotainment": "12.3-inch digital instrument cluster, 14.9-inch touchscreen, BMW iDrive system"
     },
     "exterior": {
-      "dimensions": "188.0 / 72.9 / 56.2",    
-      "Curb_Weight_lbs": "4553",        
+      "dimensions": "188.0 / 72.9 / 56.2",
+      "Curb_Weight_lbs": "4553",
       "features": [
         "Distinctive BMW kidney grille with integrated camera technology",
         "LED headlights and taillights",
@@ -122,7 +122,7 @@
       "top_speed": "155",
       "range": "155"
     },
-    
+   
     "price": {
       "starting_price": "$55,000",
       "max_price": "$65,000"
@@ -156,8 +156,8 @@
       "infotainment": "12.3-inch touchscreen, navigation, Meridian audio system"
     },
     "exterior": {
-      "dimensions": "196.9 / 87.4 / 73.6",      
-      "Curb_Weight_lbs": "4553",      
+      "dimensions": "196.9 / 87.4 / 73.6",
+      "Curb_Weight_lbs": "4553",
       "features": [
         "Iconic Range Rover design with clamshell hood",
         "LED headlights and taillights",
@@ -165,26 +165,27 @@
         "Power tailgate"
       ],
       "colors": {
-       "name":[
-        "Santorini Black",
-        "Fuji White",
-        "Yulong White",
-        "Carpathian Grey",
-        "Firenze Red"
-      ],
-      "link": "https://i.ibb.co/1G4wFJf/image-3.png"
-    }
+        "name": [
+          "Santorini Black",
+          "Fuji White",
+          "Yulong White",
+          "Carpathian Grey",
+          "Firenze Red"
+        ],
+        "link": "https://i.ibb.co/1G4wFJf/image-3.png"
+      }
     },
     "performance": {
       "zero_to_60mph": "4.5",
       "top_speed": "155",
       "range": "155"
     },
+   
     "price": {
       "starting_price": "$90,000",
       "max_price": "$130,000"
     },
-    "imageLg": "https://i.ibb.co/xXmgWJr/pngwing-2.png",
+    "imageLg": "https://i.ibb.co/BzsGGLM/Rectangle-4.png",
     "imageM": "https://i.ibb.co/bH7LxWB/Rectangle-1448.png"
   }
 ]

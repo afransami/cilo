@@ -12,8 +12,6 @@ const Card = () => {
       console.log(Cards)
   }, []);
 
-  // const imageUrl = "https://i.ibb.co/1R0vT3s/Rectangle-1365.png";
-  // const imageUrl2 = "https://i.ibb.co/c1f2Zmm/Rectangle-1366-1.png";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 px-3 lg:px-8 ">

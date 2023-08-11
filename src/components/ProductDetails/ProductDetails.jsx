@@ -98,6 +98,7 @@ const ProductDetails = (props) => {
               },
             }}
           >
+
             <SwiperSlide className="min-w-full h-screen ">
               <div className="relative">
                 <img
@@ -161,7 +162,7 @@ const ProductDetails = (props) => {
           </div>
         </div>
 
-        <div className="col-span-2 h-screen overflow-scroll px-2 min-w-full bg-white">
+        <div className="col-span-2 h-screen overflow-scroll p-2 min-w-full bg-white">
           <div className="flex flex-col items-center justify-center">
             <p className="vtitle font-bold flex items-center justify-center pt-[20%] ">
               {product.name}
@@ -238,7 +239,7 @@ const ProductDetails = (props) => {
           </p>
           <br />
 
-          <div className="flex items-start justify-between gap-4 text-[16px] mb-2">
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2 p-2">
             <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
               <p>Engine</p>
               <p>Horsepower</p>
@@ -254,8 +255,10 @@ const ProductDetails = (props) => {
 
           <p className="text-3xl font-bold font-Montserrat text-center">
             Wheels & Tires
-          </p><br /><br />
-          <div className="flex items-start justify-between gap-4 text-[16px] mb-2">
+          </p>
+          <br />
+          <br />
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2 p-2">
             <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
               <p>Wheel Dimensions (in)</p>
               <p>Tire Dimensions (mm)</p>
@@ -271,14 +274,23 @@ const ProductDetails = (props) => {
 
           <p className="text-3xl font-bold font-Montserrat text-center">
             Colors
-          </p><br /><br />
+          </p>
+          <br />
+          <br />
           <div className="flex items-center justify-center gap-4 text-[16px] mb-2">
-            <div className="flex  items-center justify-between gap-4 text-[16px] mb-2">
-              <p className="tooltip" data-tip="Blue"><MdSportsBaseball className=" text-indigo-700 text-7xl cursor-pointer hover:outline-double hover:rotate-90 transition-all hover:scale-125 rounded-full"></MdSportsBaseball></p>
-              <p className="tooltip" data-tip="Red"><MdSportsBaseball className="text-red-600 text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball></p>
-              <p className="tooltip" data-tip="Black"><MdSportsBaseball className="text-black text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball></p>
-              <p className="tooltip" data-tip="Gray"><MdSportsBaseball className="text-gray-700 text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball></p>
-              
+            <div className="flex items-center justify-between gap-4 text-[16px] mb-2">
+              <p className="tooltip" data-tip="Blue">
+                <MdSportsBaseball className=" text-indigo-700 text-7xl cursor-pointer hover:outline-double hover:rotate-90 transition-all hover:scale-125 rounded-full"></MdSportsBaseball>
+              </p>
+              <p className="tooltip" data-tip="Red">
+                <MdSportsBaseball className="text-red-600 text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball>
+              </p>
+              <p className="tooltip" data-tip="Black">
+                <MdSportsBaseball className="text-black text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball>
+              </p>
+              <p className="tooltip" data-tip="Gray">
+                <MdSportsBaseball className="text-gray-700 text-7xl cursor-pointer hover:outline-double hover:scale-125 hover:rotate-90 transition-all rounded-full"></MdSportsBaseball>
+              </p>
             </div>
 
             {/* <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
@@ -290,24 +302,69 @@ const ProductDetails = (props) => {
           <br />
 
           <p className="text-3xl font-bold font-Montserrat text-center">
-          Exterior Dimension
-          </p><br /><br />
-          <div className="flex items-start justify-between gap-4 text-[16px] mb-2">
+            Exterior Dimension
+          </p>
+          <br />
+          <br />
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2 p-2">
             <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
               <p>Length / Width / Height (in)</p>
               <p>Curb Weight (lbs)</p>
             </div>
 
-            <div className="flex flex-col items-end justify-between gap-4 text-[16px] mb-2">
+            <div className="flex flex-col items-end justify-between gap-4 text-[16px] mb-2 font-Montserrat font-bold">
               <p className="font-semibold">{product.exterior.dimensions}</p>
-              <p className="font-semibold">{product.exterior.Curb_Weight_lbs}</p>              
+              <p className="font-semibold">
+                {product.exterior.Curb_Weight_lbs}
+              </p>
             </div>
+          </div>
+          <div className="w-full flex items-center justify-between">
+            <img className="w-52" src={product.backSide} alt="" />
+            <img className="w-52" src={product.frontSide} alt="" />
           </div>
           <br />
           <br />
+          <p className="text-3xl font-bold font-Montserrat text-center">
+            Interior Dimension
+          </p>
+          <br />
+          <br />
+          <div className="flex items-start justify-between gap-4 text-[16px] mb-2 p-2">
+            <div className="flex flex-col items-start justify-between gap-4 text-[16px] mb-2">
+              <p>Headroom</p>
+              <p>Legroom, Front/rear (in)</p>
+              <p>Shoulder Room, Front/rear (in)</p>
+            </div>
 
+            <div className="flex flex-col items-end justify-between gap-4 text-[16px] mb-2 font-Montserrat font-bold">
+              <p className="font-semibold">{product.interior.head_room}</p>
+              <p className="font-semibold">
+                {product.interior.Legroom_Front_rear_in}
+              </p>
+              <p className="font-semibold">
+                {product.interior.Shoulder_Room_Front_rear_in}
+              </p>
+            </div>
+          </div>
+          <img src={product.topSide} alt="" />
+          <div
+            className="my-4"
+            style={{ borderBottom: "1px solid lightgray" }}
+          ></div>
 
-          <div className="flex  items-center justify-center text-[16px] font-semibold">
+          <p className="text-3xl font-bold font-Montserrat text-center mt-8">
+            Order Your Model
+          </p>
+          <p className="font-Montserrat text-[16px] text-center mt-2">
+            Your design qualifies for a $7,500 federal tax credit for eligible
+            buyers.
+          </p>
+          <button className="btn-block btn mt-4 mb-12 bg-slate-800 hover:bg-black text-white">Contact with us</button>
+          <br />
+          <br />
+
+          {/* <div className="flex  items-center justify-center text-[16px] font-semibold">
             <button className="flex items-center justify-between gap-10 border-4 rounded-md border-[#3e6ae1] px-4 py-4 w-full">
               <span>{product.name}</span>
               <span>{product.price.starting_price}</span>
@@ -321,14 +378,7 @@ const ProductDetails = (props) => {
               <Link className="text-sm">Learn More</Link>
             </span>
           </div>
-          <br />
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error
-            facere similique? Ullam veritatis rerum quibusdam, unde doloremque
-            in quam eius, soluta assumenda perspiciatis adipisci aperiam tenetur
-            omnis delectus magni.
-          </p>
+          <br />           */}
         </div>
       </div>
     </div>
